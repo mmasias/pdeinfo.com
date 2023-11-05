@@ -1,0 +1,100 @@
+# WebCal Data File
+# Major Jewish Holidays & Observances (1995-2005)
+19950316|Purim|
+19950415|Pesach (Passover)|
+19950604|Shavuot|
+19950925|Rosh Hashana|
+19951004|Yom Kippur|
+19951009|Sukkot|
+19951016|Shemini Atzeret|
+19951218|Hanukkah Begins|
+19951225|Hanukkah Ends|
+19960305|Purim|
+19960404|Pesach (Passover)|
+19960524|Shavuot|
+19960914|Rosh Hashana|
+19960923|Yom Kippur|
+19960928|Sukkot|
+19961005|Shemini Atzeret|
+19961206|Hanukkah Begins|
+19961213|Hanukkah Ends|
+19970323|Purim|
+19970422|Pesach (Passover)|
+19970611|Shavuot|
+19971002|Rosh Hashana|
+19971011|Yom Kippur|
+19971016|Sukkot|
+19971023|Shemini Atzeret|
+19971224|Hanukkah Begins|
+19971231|Hanukkah Ends|
+19980312|Purim|
+19980411|Pesach (Passover)|
+19980531|Shavuot|
+19980921|Rosh Hashana|
+19980930|Yom Kippur|
+19981005|Sukkot|
+19981012|Shemini Atzeret|
+19981214|Hanukkah Begins|
+19981221|Hanukkah Ends|
+19990302|Purim|
+19990401|Pesach (Passover)|
+19990521|Shavuot|
+19990911|Rosh Hashana|
+19990920|Yom Kippur|
+19990925|Sukkot|
+19991002|Shemini Atzeret|
+19991204|Hanukkah Begins|
+19991211|Hanukkah Ends|
+20000321|Purim|
+20000420|Pesach (Passover)|
+20000609|Shavuot|
+20000930|Rosh Hashana|
+20001009|Yom Kippur|
+20001014|Sukkot|
+20001021|Shemini Atzeret|
+20001222|Hanukkah Begins|
+20001229|Hanukkah Ends|
+20010309|Purim|
+20010408|Pesach (Passover)|
+20010528|Shavuot|
+20010918|Rosh Hashana|
+20010927|Yom Kippur|
+20011002|Sukkot|
+20011009|Shemini Atzeret|
+20011210|Hanukkah Begins|
+20011217|Hanukkah Ends|
+20020226|Purim|
+20020328|Pesach (Passover)|
+20020517|Shavuot|
+20020907|Rosh Hashana|
+20020916|Yom Kippur|
+20020921|Sukkot|
+20020928|Shemini Atzeret|
+20021130|Hanukkah Begins|
+20021207|Hanukkah Ends|
+20030318|Purim|
+20030417|Pesach (Passover)|
+20030606|Shavuot|
+20030927|Rosh Hashana|
+20031006|Yom Kippur|
+20031011|Sukkot|
+20031018|Shemini Atzeret|
+20031220|Hanukkah Begins|
+20031227|Hanukkah Ends|
+20040307|Purim|
+20040406|Pesach (Passover)|
+20040526|Shavuot|
+20040916|Rosh Hashana|
+20040925|Yom Kippur|
+20040930|Sukkot|
+20041007|Shemini Atzeret|
+20041208|Hanukkah Begins|
+20041215|Hanukkah Ends|
+20050325|Purim|
+20050424|Pesach (Passover)|
+20050613|Shavuot|
+20051004|Rosh Hashana|
+20051013|Yom Kippur|
+20051018|Sukkot|
+20051025|Shemini Atzeret|
+20051226|Hanukkah Begins|

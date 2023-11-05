@@ -1,0 +1,29 @@
+<html>
+<head>
+ <title>MailMan, from Endymion</title>
+</head>
+
+<frameset cols="129,*" border="3">
+  <frame src="MailMan(ME)?MENU=TRUE" leftmargin="10" topmargin="10" marginheight="10" marginwidth="10" name="menuframe" scrolling="no" noresize bordercolor="#000000">
+  <frameset rows="50%,50%" border="3">
+    <frame src="MailMan(ME)?LIST=TRUE" name="listframe" scrolling="auto" leftmargin="10" topmargin="10" marginheight="10" marginwidth="10">
+    <frame src="MailMan(ME)?BLANK=TRUE" name="messageframe" scrolling="auto" leftmargin="10" topmargin="10" marginwidth="10" marginheight="10" bordercolor="#000000">
+</frameset>
+</frameset>
+
+<body>
+<noframes>
+<center>
+Your browser doesn't understand frames.  Don't worry though, MailMan was 
+designed to work with all browsers.  The next time you use MailMan, you might
+want to select the 'no frames' option on the login page to avoid this step.
+Press the following button to continue.
+<form method="post" action="MailMan(ME)">
+MailMan(AUTHENTICATION)
+<input type="hidden" name="NOFRAMES" value="TRUE">
+<input type="submit" name="LIST" value="Continue">
+</form>
+</center>
+</noframes>
+</body>
+</html>

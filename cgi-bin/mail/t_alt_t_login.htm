@@ -1,0 +1,118 @@
+<html>
+<head>
+<meta http-equiv="pragma" content="no-cache">
+<title>MailMan Login</title>
+<!-- The text-only templates don't implement kiosk mode because
+     we just thought that would be silly. -->
+</head>
+
+<body bgcolor="#ffffff" link="#009999" vlink="#006666"
+alink="#00CCCC" topmargin="10" leftmargin="10" marginwidth="10" marginheight="10">
+
+    <p><font face="Arial, Helvetica">MailMan(GREETING)</font> <!--webbot bot="HTMLMarkup"
+    startspan -->
+<!-- This greeting snippet is provided to the user when they first
+     visit the login page or when they log out. -->
+<!-- MailManSnippet(GREETING)
+<center>
+<table cellspacing="0" cellpadding="0" width="80%" border="0">
+<tr>
+<td align="left" valign="top"><font face="Arial, Helvetica">Welcome to Endymion MailMan MailMan(EDITION) MailMan(VERSION).  For more information about what
+    Endymion MailMan is and what it does, please refer to the <a
+    href="http://www.endymion.com/products/mailman.htm">MailMan page</a> at <a
+    href="http://www.endymion.com/">Endymion Corporation</a>. To check your mail now, log in here: </font></td></tr></table></center>
+EndSnippet(GREETING) -->
+<!--webbot bot="HTMLMarkup" endspan --> </p>
+    <form method="POST" action="MailMan(ME)" name="LOGINFORM">
+      <input type="hidden" name="UNIQUE" value="MailMan(UNIQUE)"><input type="hidden"
+      name="LOGIN" value="Log In"><div align="center"><p><center><table border="0">
+        <tr>
+          <td><font face="Arial, Helvetica"><b>Username:</b></font></td>
+          <td><font face="Arial, Helvetica"><input type="text" name="USERNAME" size="30" value=""></font></td>
+        </tr>
+        <tr>
+          <td><font face="Arial, Helvetica"><b>Password:</b></font></td>
+          <td><font face="Arial, Helvetica"><input type="password" name="PASSWORD" size="30" value=""> </font></td>
+        </tr>
+        <tr>
+          <td><font face="Arial, Helvetica"><b>Server:</b></font></td>
+          <td><font face="Arial, Helvetica"><input type="text" name="SERVER" size="30" value=""></font></td>
+        </tr>
+      </table>
+      </center></p></div><table cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+	  <table cellspacing="4" cellpadding="0" border="0">
+        <tr>
+          <td colspan="2" bgcolor="#000000" width="100%"><img src="i_clear.gif" alt=" " width="1" height="1" border="0"></td>
+        </tr>
+            <tr>
+              <td valign="middle">
+	      <table cellspacing="0" cellpadding="0" border="0">
+	      <tr>
+	      <td><font face="Arial, Helvetica"><input type="radio" name="INTERFACE" value="FRAMES=TRUE" checked></font></td>
+	      </tr>
+	      </table>
+	      </td>
+              <td valign="middle" align="left"><font face="Arial, Helvetica" size="2"><b>Use an interface that is split into panes.</b></font><br>
+<font face="Arial, Helvetica" size="2">This interface is more user friendly and attractive, but requires a web browser that supports 'frames' and 'cookies'.</font></td>
+            </tr>
+            <tr>
+              <td valign="middle">
+	      <table cellspacing="0" cellpadding="0" border="0">
+	      <tr>
+	      <td><font face="Arial, Helvetica"><input type="radio" name="INTERFACE" value="NOFRAMES=TRUE"></font></td>
+	      </tr>
+	      </table>
+	      </td>
+              <td valign="middle" align="left"><font face="Arial, Helvetica" size="2"><b>Use a single-pane interface.</b></font><br>
+<font face="Arial, Helvetica" size="2">For old or 'thin' web browsers.  More cumbersome to use.</font></td>
+            </tr>
+	    <!-- This row is intended to be an example of how to instruct MailMan to use an alternate template set, including telling it to do noframes for that template set. -->
+            <tr>
+              <td valign="middle">
+	      <table cellspacing="0" cellpadding="0" border="0">
+	      <tr>
+	      <td><font face="Arial, Helvetica"><input type="radio" name="INTERFACE" value="ALTERNATE_TEMPLATES=t_alt_&NOFRAMES=TRUE"></font></td>
+	      </tr>
+	      </table>
+	      </td>
+              <td valign="middle" align="left"><font face="Arial, Helvetica" size="2"><b>Use a totally text-based interface.</b></font><br>
+<font face="Arial, Helvetica" size="2">
+Designed for very old or very 'thin' web browsers, or for extremely slow network connections.  Very ugly, but very practical.  Designed to work anywhere.
+</font></td>
+            </tr>
+        <tr><td colspan="2" bgcolor="#000000" width="100%"><img src="i_clear.gif" alt=" " width="1" height="1" border="0"></td></tr>
+            <tr>
+              <td valign="middle" align="right"><font face="Arial, Helvetica"><input type="checkbox" name="NOCACHE"
+              value="ON"></font></td>
+              <td valign="top" align="left"><font face="Arial, Helvetica" size="2"><b>Don't cache output.</b></font><br>
+<font face="Arial, Helvetica" size="2">Check here to set MailMan to mark all output pages as expired so that they will not be cached, for increased security and privacy.  (Some web browsers may not honor page expiration directives.)</font></td>
+            </tr>
+        <tr><td colspan="2" bgcolor="#000000" width="100%"><img src="i_clear.gif" alt=" " width="1" height="1" border="0"></td></tr>
+          </table>
+          </td>
+        </tr>
+      </table>
+      <center><p><font face="Arial, Helvetica">
+<input type="submit" name="LOGIN" value="Log In">
+<input type="submit" name="HELP" value="Help">
+      </font></p>
+    <p align="center"><font face="Arial, Helvetica" size="1"><a
+    href="http://www.endymion.com/products/mailman">MailMan</a> Script Copyright &copy; 1997 - 1999
+    <a href="http://www.endymion.com">Endymion Corporation</a><br>
+    Interface Copyright &copy; 1997 - 1999
+    <a href="http://www.endymion.com">Endymion Corporation</a> and
+    <a href="http://www.hypnopaedia.com">Hypnopaedia Studios</a>.<br>
+    Microcompanies With Attitude</font><br>
+    </p>
+      </center>
+    </form>
+
+</body>
+</html>
+
+
+
+
+

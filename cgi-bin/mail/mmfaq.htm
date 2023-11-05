@@ -1,0 +1,1475 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Frequently Asked Questions for MailMan version 3.0</title>
+</head>
+<body bgcolor="#FFFFFF">
+<center>
+<font face="Arial, Helvetica"><font size="5">
+<p>
+<b>Frequently Asked Questions for MailMan version 3.0</b>
+</p>
+</font><font size="2">
+Last Modified: Tuesday, November 22, 1999<br>
+</font><i><font size="2">Copyright &copy;  Endymion Corporation, 1998<br>
+</font><font size="2"><a href="http://www.endymion.com">http://www.endymion.com</a></font></i></font>
+</center>
+<p>
+<font face="Arial, Helvetica">
+This document is an attempt to answer some of the more frequently
+asked questions concerning MailMan, a web-based email interface from
+Endymion Corporation. An HTML copy of this document is stored online
+at <a href="http://www.endymion.com/products/mailman/faq.htm">http://www.endymion.com/products/mailman/faq.htm</a>. You
+might want to check online for a more recent version. This document is
+not intended to act as marketing materials for MailMan or for
+Endymion, this document is intended to assist us in providing fast and
+efficient technical support for MailMan users, 24 hours a day. We have
+attempted to address all levels of reader, from those only barely
+familiar with Internet-related software to those with the task of
+actually implementing and maintaining MailMan installations. Readers
+of this document are the real judge of how successfully we have
+managed to pull that trick off though. Let us know if you have any
+serious issues with the information contained here. We have also tried
+to use simple and straightforward English, since our users come from
+all over the world. If we have used any idioms that are difficult to
+understand in your particular region, please let us know so that we
+might make this document more universally
+comprehensible.</font>
+</p>
+<hr>
+<p>
+<font face="Arial, Helvetica" size="4"><b>1) <a href="#1.">Overview</a></b></font>
+<br>
+<font face="Arial, Helvetica" size="2">1.1.) <a href="#1.1.">What is MailMan?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">1.2.) <a href="#1.2.">What could I use MailMan for?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">1.3.) <a href="#1.3.">Could MailMan be used for kiosk applications?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">1.4.) <a href="#1.4.">How is MailMan different from HotMail, YahooMail, ExciteMail, etc?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">1.5.) <a href="#1.5.">Where would I find current information on MailMan?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">1.6.) <a href="#1.6.">What's the short version of how MailMan works from a
+technical standpoint?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">1.7.) <a href="#1.7.">What are some of MailMan's more notable features?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">1.8.) <a href="#1.8.">Can I customize the interface of MailMan?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">1.9.) <a href="#1.9.">What is the difference between the Standard and the
+Professional editions of MailMan?</a></font>
+<br>
+</p>
+<p>
+<font face="Arial, Helvetica" size="4"><b>2) <a href="#2.">Requirements</a></b></font>
+<br>
+<font face="Arial, Helvetica" size="2">2.1.) <a href="#2.1.">What are the basic requirements for setting up a MailMan
+installation?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">2.2.) <a href="#2.2.">Do I need the file "cgi-lib.pl" to run MailMan?</a></font>
+<br>
+</p>
+<p>
+<font face="Arial, Helvetica" size="4"><b>3) <a href="#3.">Compatibility</a></b></font>
+<br>
+<font face="Arial, Helvetica" size="2">3.1.) <a href="#3.1.">What standards and protocols does MailMan comply with?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">3.2.) <a href="#3.2.">Is MailMan compatible with SSL?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">3.3.) <a href="#3.3.">Is there a MailMan translation available for the xxxx
+language?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">3.4.) <a href="#3.4.">What is new in version 3?</a></font>
+<br>
+</p>
+<p>
+<font face="Arial, Helvetica" size="4"><b>4) <a href="#4.">Licensing</a></b></font>
+<br>
+<font face="Arial, Helvetica" size="2">4.1.) <a href="#4.1.">Is MailMan free?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">4.2.) <a href="#4.2.">Why is the MailMan source code no longer open?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">4.3.) <a href="#4.3.">What constitutes a single "installation" of MailMan?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">4.4.) <a href="#4.4.">Why are you picking on Scientology?</a></font>
+<br>
+</p>
+<p>
+<font face="Arial, Helvetica" size="4"><b>5) <a href="#5.">Installation</a></b></font>
+<br>
+<font face="Arial, Helvetica" size="2">5.1.) <a href="#5.1.">What is the difference between the different installation
+distributions?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">5.2.) <a href="#5.2.">What are the files included in a MailMan distribution?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">5.3.) <a href="#5.3.">What is the basic installation procedure?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">5.4.) <a href="#5.4.">What is the installation procedure for a Unix system?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">5.5.) <a href="#5.5.">What is the installation procedure for an NT system?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">5.6.) <a href="#5.6.">I installed MailMan and it doesn't work, what do I do?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">5.7.) <a href="#5.7.">What does it mean when I try to run MailMan and the server
+says "Can't locate mmcgilib.pl"?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">5.8.) <a href="#5.8.">My server gives me this error: "Can't locate Socket.pm in
+@INC", what does that mean?</a></font>
+<br>
+</p>
+<p>
+<font face="Arial, Helvetica" size="4"><b>6) <a href="#6.">Operation</a></b></font>
+<br>
+<font face="Arial, Helvetica" size="2">6.1.) <a href="#6.1.">How would I use MailMan in conjunction with a "primary"
+mailer on my home or office system?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">6.2.) <a href="#6.2.">Wouldn't IMAP be very well-suited to this type of
+scenario?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">6.3.) <a href="#6.3.">When I try to send a message, I get: "Error 550: Relay
+(permission) denied.", what's up?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">6.4.) <a href="#6.4.">I get this message every single time I use MailMan: "Your
+MailMan session was initiated from a different network address than
+your current location. For security reasons, MailMan will not
+continue. You must log in again from this location to continue." How
+do I stop it?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">6.5.) <a href="#6.5.">Mailman has been working fine for a while, but now it
+returns an error about "premature headers." How do I fix
+this?</a></font>
+<br>
+</p>
+<p>
+<font face="Arial, Helvetica" size="4"><b>7) <a href="#7.">Customization</a></b></font>
+<br>
+<font face="Arial, Helvetica" size="2">7.1.) <a href="#7.1.">How do I customize MailMan to blend into my site and provide
+a branded interface to my users?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">7.2.) <a href="#7.2.">Is it possible to "rig" a MailMan installation with a
+default POP3 or SMTP server address so that the user doesn't have
+to enter them?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">7.3.) <a href="#7.3.">Is it possible to "rig" a MailMan installation with a
+default POP3 or SMTP server address so that the user can't modify
+them even if they want to?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">7.4.) <a href="#7.4.">Is it possible to 'rig' a MailMan installation to never
+display the frames interface?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">7.5.) <a href="#7.5.">Is it possible to override the domain name displayed in the
+"From" box when a user is sending email?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">7.6.) <a href="#7.6.">My HTTP server requires me to move the image files into a
+directory other than MailMan is installed in, but that breaks the
+image references, what do I do?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">7.7.) <a href="#7.7.">The "message input" box is too large, and won't fit in my
+browser. How can I make it smaller?</a></font>
+<br>
+</p>
+<p>
+<font face="Arial, Helvetica" size="4"><b>8) <a href="#8.">Common Errors and Problems</a></b></font>
+<br>
+<font face="Arial, Helvetica" size="2">8.1.) <a href="#8.1.">What is a 404 Error? What does it mean? How do I remedy
+it?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">8.2.) <a href="#8.2.">What is a 501 Error? What is an Internal Server Error? How
+do I remedy it?</a></font>
+<br>
+<font face="Arial, Helvetica" size="2">8.3.) <a href="#8.3.">What is a "premature end of script headers" error? Why does
+it show up after about a month of use? How do I remedy it?</a></font>
+<br>
+</p>
+<hr>
+<center>
+<font face="Arial, Helvetica" size="5"><b><a name="1.">1.</a> Overview</b></font>
+</center>
+<hr>
+<p>
+<p>
+<font face="Arial, Helvetica" size="4">
+This section provides an overview of the basic top-level questions
+about what MailMan is and what it does.</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="1.1.">1.1</a>) What is MailMan?</b></font><font face="Arial, Helvetica">
+<p>
+MailMan is a system that provides any user with an interface to his or
+her own email account from any web browser anywhere in the
+world. MailMan is a piece of software that runs on a web server as a
+part of an existing web site that interacts with a mail server and
+displays the results through the web server.  The output that MailMan
+produces is pure HTML, and can be understood by any web browser,
+including very 'thin' browsers such as text-based browsers or kiosks.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="1.2.">1.2</a>) What could I use MailMan for?</b></font><font face="Arial, Helvetica">
+<p>
+A MailMan installation could support a free email advertisement
+site. A different installation of MailMan could provide essential
+email access for the students at a small community college or the
+students at a large university. A different installation of MailMan
+could allow the users of a neighborhood ISP to access their local
+email accounts through the web without configuring a mail reader. A
+different installation of MailMan could provide access to any email
+address anywhere in the world for the patrons of a cyber cafe. Another
+installation might allow business workers to stay in touch while away
+from their desks, even while at a pay kiosk in an airport or at a
+borrowed workstation at another corporation. Another installation
+might allow a family to keep in touch with friends through Grandma's
+WebTV box while visiting for Christmas.  MailMan is a very
+general-purpose application that simply provides access to existing
+email systems.  The possibilities are virtually endless.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="1.3.">1.3</a>) Could MailMan be used for kiosk applications?</b></font><font face="Arial, Helvetica">
+<p>
+We designed MailMan with applications such as standalone kiosks in
+mind. The only caveat that we would mention is that when you design an
+interactive kiosk, privacy issues become a big concern. You do not
+want a user to be able to walk up to a kiosk and see the mail that a
+previous user was reading. To this end, please be very careful in the
+selection of an appropriate web browser for kiosk
+applications. Specifically, please note that the Microsoft Internet
+Explorer (all known versions 1.0 through 5.00, as of this writing)
+does not conform to accepted Internet standards for the expiration of
+web pages from page caches (the "Expires:" HTTP response header, see
+RFC 1945 for more details on this directive). The Microsoft Internet
+Explorer also does not conform to accepted Internet standards for
+directing a browser to not cache web pages in the first place (the
+"Cache-control:" response header, see RFC 2068 for more details on
+this directive). Because of these non-conformance issues, Endymion
+strongly recommends against using any version of the Microsoft
+Internet Explorer for kiosk applications involving MailMan. Netscape
+Navigator, Opera, and many other popular web browsers properly conform
+to Internet communications protocol standards and are very well suited
+for kiosk applications.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="1.4.">1.4</a>) How is MailMan different from HotMail, YahooMail, ExciteMail, etc?</b></font><font face="Arial, Helvetica">
+<p>
+Free Internet mail services such as the ones mentioned above provide
+the same basic services that MailMan does, but they provide them
+through a proprietary web site, generally with the purpose of selling
+advertisements to a guaranteed repeat audience. Free email sites
+provide the user with a mailbox and the server to access the
+mailbox. MailMan is different because it is simply a piece of
+software, a technology to be applied in any number of ways. MailMan
+works in conjunction with other mail servers in order to process
+incoming and outgoing mail, communicating with those servers though
+well-accepted Internet standards such as the POP3 and STMP
+protocols. The primary advantage of MailMan is that administrators can
+control their own MailMan installations. They have the power to
+specify what mail servers MailMan connects to, what MailMan looks like
+when it runs, who has access to MailMan, etc. When you use MailMan,
+you are accessing the same email account that you normally access, not
+a new account that was created just for you to access through a free
+email service. Some free email services allow you to access your own
+email address through the service, but you are still forced into using
+someone else's web server and you are forced into watching someone
+else's advertisements. With MailMan you have much more control.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="1.5.">1.5</a>) Where would I find current information on MailMan?</b></font><font face="Arial, Helvetica">
+<p>
+The "official" MailMan information site is at the Endymion Corporation
+web site, at <a href="http://www.endymion.com/products/mailman">http://www.endymion.com/products/mailman</a>.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="1.6.">1.6</a>) What's the short version of how MailMan works from a
+technical standpoint?</b></font><font face="Arial, Helvetica">
+<p>
+The heart of MailMan is a CGI application written in Perl, version
+5. The mail application generates MailMan's user interface dynamically
+by reading template files filled with HTML code, processing them, and
+producing output for the user through a web server. To obtain useful
+email information, MailMan obtains a user's email account
+authentication information directly from the user (a username,
+password and server name) and communicates with the user's POP3 email
+server the way that any client-side mail software ordinarily
+would. The user sees a list of messages and can select messages for
+viewing, deletion, and other normal mail tasks. If a user wishes to
+reply to a message, forward a message, or create a new message,
+MailMan communicates with an SMTP mail server to send the outgoing
+message the way that any ordinary client-side software would.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="1.7.">1.7</a>) What are some of MailMan's more notable features?</b></font><font face="Arial, Helvetica">
+<p>
+The current version of MailMan supports a frames-based interface that
+provides the user with a message list in a top frame and individual
+messages in the bottom frame. This feature makes browsing your mail
+through a web interface very simple and stress-free and eliminates
+some of the lag issues that are normally associated with web-based
+email. No other web-based email system that we know of supports this
+type of sophisticated interface.MailMan can receive message
+attachments through any web browser. Message attachments can be MIME
+encoded using either Base64 or Quoted-Printable encoding, or they can
+be simple Uuencoded binaries. If you are using a browser that supports
+file uploading (Netscape 2.0 and above and Microsoft's Internet
+Explorer 4.0 and above, as of this writing) then you can also send
+message attachments.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="1.8.">1.8</a>) Can I customize the interface of MailMan?</b></font><font face="Arial, Helvetica">
+<p>
+Yes. One of the primary benefits of MailMan is that the entire
+interface that is presented to the user is the result of a collection
+of template files that contain ordinary HTML. These templates can be
+modified in any way as long as they still contain certain vital
+keywords that allow MailMan to insert valuable information. These
+keywords are of the form "MailMan(SOMETHING)", and are responsible for
+showing MailMan's template processor where to insert information
+on-the-fly. Leave those keywords and snippets in place and you can
+modify the surrounding HTML as much as you like. Endymion Corporation
+places no restrictions on how you modify the templates, you are not
+obligated to preserve our logos or links back to our site. We are
+thrilled peachy when custom installations preserve credit and provide
+links back to Endymion Corporation, of course (especially for our
+non-commercial users, hint, hint) but we don't feel right requiring
+you to display our logo or links to us.</p>
+<p>
+Also, note that the copyright notices on the templates refer to the
+content of the templates themselves, not to the MailMan application
+itself. MailMan's copyright notices are contained within the script
+and no external notices are necessary. If you modify the templates at
+all, it's kind of silly to leave our copyright notices on your own
+custom web designs. We're not complaining, we just wanted to clear
+that up, since a lot of kind people have inquired about what
+restrictions we place on modifications to the templates. The answer
+is: none.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="1.9.">1.9</a>) What is the difference between the Standard and the
+Professional editions of MailMan?</b></font><font face="Arial, Helvetica">
+<p>
+The primary difference between the Standard Edition and the
+Professional Edition is a simple operational rule: the Standard
+Edition is not allowed to store anything on the HTTP server that it
+runs on. This precludes the Standard Edition from offering some of the
+features that you might expect to see in a mail client, such as
+folders, address books, user signatures and other persistent
+settings. The purpose of this rule is that the Standard Edition
+requires virtually no maintenance once it is properly configured. You
+won't ever have to worry about user quotas, disk allocation,
+monitoring your user message stores for integrity, backups, or any
+other administration issues. The Standard Edition is perfect for web
+sites that are hosted at Internet presence providers that provide
+limited disk space, or for applications where administration either
+isn't an option or isn't desired. The Standard Edition can be thought
+of more as a 'viewer' for a POP3 server than a complete mailer. The
+only messages that you see are the messages that are actually on the
+POP3 server at that time.</p>
+<p>
+The Professional Edition, on the other hand, stores user messages on
+the server side after they have been fetched from the POP3 server,
+allowing you to organize them into folders like you might in Eudora or
+whatever mail program you ordinarily use. The Professional Edition
+also stores user settings on the server side, allowing users to
+configure options such as a default SMTP server or a signature message
+to append to outgoing messages.</p>
+<p>
+The Standard Edition is a version that we intend for use by users as a
+secondary mail system that will compliment an existing client-side
+mail package, the Professional Edition is intended for use by novice
+users as a primary mailer. Experienced users will probably not be
+happy with any version of MailMan as a primary mailer, just like they
+would not use HotMail or ExciteMail for a primary mailer.</p>
+<p>
+For very large or very serious web mail installations, please consider
+Sake Mail as an alternative to MailMan.  Sake Mail is conceptually
+equivalent to MailMan, but with one critical difference: Sake Mail is
+not a CGI script.  Sake Mail is an application that runs as a
+'servlet', a special type of plug-in that becomes a part of your web
+server, developed for the Java platform.  Sake Mail produces pure,
+simple HTML just like MailMan, it sends no Java applets or JavaScript
+of any kind to your users, so that any web browser can use it,
+including text-based browsers.  Since Sake Mail is a persistent
+plug-in for your server, it does not need to be instantiated each time
+a user presses a button or clicks on a message. Persistence also
+allows Sake Mail to cache its interface template files. Sake Mail has
+several different modes of operation, one mimics the behavior of the
+Standard Edition of MailMan (with the addition of a message draft
+saving feature), one mimics the behavior of the Professional Edition,
+and it also fully supports IMAP. For serious installations, we
+strongly recommend using an IMAP server and Sake Mail over any edition
+of MailMan. If you simply want to easily add web mail support to an
+existing POP3 server, then MailMan may be more appropriate. More
+information on Sake Mail is available at
+<a href="http://www.endymion.com/products/sake/mail/">http://www.endymion.com/products/sake/mail/</a>.</p>
+</font>
+</p>
+</p>
+<hr>
+<center>
+<font face="Arial, Helvetica" size="5"><b><a name="2.">2.</a> Requirements</b></font>
+</center>
+<hr>
+<p>
+<p>
+<font face="Arial, Helvetica" size="4">
+This subsection answers questions regarding hardware, software, and
+network requirements for running MailMan.</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="2.1.">2.1</a>) What are the basic requirements for setting up a MailMan
+installation?</b></font><font face="Arial, Helvetica">
+<p>
+In order to install either edition of MailMan you must have a
+functioning web server that has the ability to run Perl CGI
+applications. We strongly recommend Apache (information on Apache is
+available at <a href="http://www.apache.org">http://www.apache.org</a> simply because we are
+very familiar with it and it is known to work very well almost
+everywhere. MailMan has been installed on virtually every web server
+that we have ever heard of, including Microsoft IIS under NT, Xitami
+<a href="http://www.imatix.com/">http://www.imatix.com/</a>, the proprietary web server used by
+Best Internet, etc. Your server must have Perl, version 5
+installed. For Windows servers we strongly recommend using the
+ActivePerl interpreter, <a href="http://www.activestate.com">http://www.activestate.com</a>. We have
+tested MailMan on systems running Windows 95, Windows 98, Windows NT
+4.0, BSD, and Linux. Additionally, we have users that run MailMan on
+machines running SGI Irix, Solaris, and others. We have never tested
+MailMan on any operating system for Apple Macintosh computers and we
+have no idea whether it will work under MacPerl or not. Other than
+Macintoshes, MailMan has no known operating system
+incompatibilities.</p>
+<p>
+To run the Professional Edition of MailMan, you must also have some
+disk space free on your HTTP server for storing user messages and
+settings. How much disk space you need depends on how many users you
+have and how much mail they get.</p>
+<p>
+To read incoming mail you must have access to a functioning POP3 mail
+server and to send outgoing messages you must have access to a
+functioning STMP mail server. These are all very common Internet
+standards and you probably have access to the necessary mail servers
+if you have an Internet email account.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="2.2.">2.2</a>) Do I need the file "cgi-lib.pl" to run MailMan?</b></font><font face="Arial, Helvetica">
+<p>
+In older installations of MailMan, the file "cgi-lib.pl" was included
+in the installation, and was critical to the running of MailMan. No
+current version of MailMan requires this file, however. MailMan now
+needs the perl library "cgi.pm," which in included in all
+distributions of perl5. If MailMan is not running, and you cannot find
+"cgi.pm," you should reinstall perl5.
+</p>
+</font>
+</p>
+</p>
+<hr>
+<center>
+<font face="Arial, Helvetica" size="5"><b><a name="3.">3.</a> Compatibility</b></font>
+</center>
+<hr>
+<p>
+<p>
+<font face="Arial, Helvetica" size="4">
+This section discusses issues of Mailman's compatibility with
+standards, security systems, and languages.</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="3.1.">3.1</a>) What standards and protocols does MailMan comply with?</b></font><font face="Arial, Helvetica">
+<p>
+MailMan uses CGI to communicate with the host web server. For more
+information about CGI, consult Nick Kew's CGI FAQ at
+<a href="http://www3.pair.com/webthing/docs/cgi/faqs/cgifaq.shtml">http://www3.pair.com/webthing/docs/cgi/faqs/cgifaq.shtml</a>
+</p>
+<p>
+For the generation of HTTP headers, MailMan conforms as closely as
+possible with the proposed standard RFC 2068, "Hypertext Transfer
+Protocol -- HTTP/1.1", as well as the earlier related specifications
+such as RFC 1945, "Hypertext Transfer Protocol -- HTTP/1.0."</p>
+<p>
+MailMan's user interface is generated using messages that comply as
+closely as possible with RFC 1866, "HyperText Markup Language
+Specification - 2.0" and related specifications.</p>
+<p>
+Persistent state information for the frames-based MailMan interface is
+maintained according to RFC 2109, "HTTP State Management Mechanism".</p>
+<p>
+For communication with incoming internet email servers, MailMan
+conforms as closely as possible with RFC 1939, "Post Office Protocol -
+Version 3", and was originally based on the earlier specification, RFC
+1725. MailMan is in strict compliance with end of line delimiters
+specified in the POP3 standards documents and should be compatible
+with POP3 servers regardless of the end of line delimiter used in the
+server's host operating system.</p>
+<p>
+For communication with outgoing internet email servers, MailMan
+conforms as closely as possible with RFC 821, "Simple Mail Transfer
+Protocol". MailMan does not make use of enhancements provided by later
+approved extension standards such as RFC 1869 or RFC 1870.</p>
+<p>
+The messages that MailMan processes and generates are compliant as
+closely as possible with RFC 822, "Standard for the format of ARPA
+Internet text messages". Formatted messages and messages with
+attachments are automatically handled by portions of MailMan that are
+compliant as closely as possible with the specifications in RFC 2045,
+RFC 2046, RFC 2047, RFC 2048 and RFC 2049, "Multipurpose Internet Mail
+Extensions (MIME)", parts one through five.</p>
+<p>
+All of the above referenced standards documents are available at
+<a href="http://www.ietf.org">http://www.ietf.org</a>.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="3.2.">3.2</a>) Is MailMan compatible with SSL?</b></font><font face="Arial, Helvetica">
+<p>
+Mailman should be completely compatible with a Secure Socket Layer.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="3.3.">3.3</a>) Is there a MailMan translation available for the xxxx
+language?</b></font><font face="Arial, Helvetica">
+<p>
+During the initial development of MailMan, we played a fairly passive
+role in the translation of MailMan templates to other languages. The
+design of the templates for the Standard Edition have stabilized quite
+nicely though, and we have become very interested in obtaining
+translated templates so that we can make them available to other
+users. Most of the requests for foreign (to us) language versions of
+MailMan have been coming from Universities. We are planning on
+providing these collections of translated template files free of
+charge to anyone that is interested, so if you have translated MailMan
+to any language other than English, we are very interested in
+obtaining the right to redistribute your templates. We don't care if
+your templates contain your custom branding instead of the original,
+out-of-the-box gear theme. We think that it's especially cool when
+people make translations and still use our out-of-the-box gear theme,
+but of course that's not necessary. As long as you don't mind us
+redistributing your branded look, we will make it available. Hopefully
+we will eventually have several different translations for each of the
+more common languages. We are also very interested in less common
+languages though, such as Icelandic or Finnish. Please contact
+mailman@endymion.com if you have a translation that you would like to
+make available. The translation packs will eventually be available
+from the "Download" section of our web site. We have already settled
+agreements for German and French translations, but we also are
+interested in other languages.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="3.4.">3.4</a>) What is new in version 3?</b></font><font face="Arial, Helvetica">
+<p>
+If you are a user of version 2 of MailMan, you will notice several
+improvements in version 3. Behind the scenes, the primary modification
+in version 3 is that MailMan now uses CGI.pm instead of
+cgi-lib.pl. This makes things cleaner and more modern and allows us to
+distributed MailMan as a single file, plus templates. On the surface,
+the biggest change in version 3 is the new template set. We thought
+that the templates that we designed in-house looked good until we saw
+what Hypnopaedia Studios was able to do with them. We hired
+Hypnopaedia to produce the templates for version 3 and we think that
+they make our old templates look primitive by comparison. Hypnopaedia
+is available for MailMan customization contracts.</p>
+Other new features: 
+<ul>
+<li>
+</li>A new Kiosk Mode, which opens a new window when a user logs in
+and closes it when they log out. This prevents future users on public
+terminals from being able to use a combination of 'back' and 'reload'
+to intrude into a previous user's mail session, because the window
+containing the mail session (and the user's history, which is the real
+culprit) is removed when the user logs out. Note that being able to
+back into a previous user's mail session has nothing to do with cached
+output, it is possible because web browsers generally store the
+information needed to re-post forms in their history logs.
+<li>
+</li>An option to write attachments to a temporary directory on the HTTP
+server and redirect the user's browser to that temporary file when a
+user downloads a file. This eliminates usability problems associated
+with MailMan's normal attachment serving procedure. Normally
+attachments are generated and served on-the-fly. MailMan includes the
+proper HTTP headers in this case for a web browser to infer the
+attachment's file name and store it appropriately, but most web
+browsers don't handle this information properly. By storing the file
+and redirecting the user to it, this problem is eliminated because the
+attachment is served by the web server itself from the file
+system.
+<li>
+</li>Outgoing banners. You can now configure MailMan to append
+'Get your ISP service for $19.95/mo at Whatever ISP, Inc' to each
+outgoing message if you like, or you can configure it to append
+nothing at all.</ul>
+<p>
+These new additions are entirely the result of user feedback. We are
+eager to improve MailMan, and the above improvements address some of
+the most common concerns of our users over the last year or
+two. Please keep those suggestions coming in.
+</p>
+</font>
+</p>
+</p>
+<hr>
+<center>
+<font face="Arial, Helvetica" size="5"><b><a name="4.">4.</a> Licensing</b></font>
+</center>
+<hr>
+<p>
+<p>
+<font face="Arial, Helvetica" size="4">This section describes the licensing structure of
+MailMan.</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="4.1.">4.1</a>) Is MailMan free?</b></font><font face="Arial, Helvetica">
+<p>
+No, MailMan is not free. An employee of Endymion Corporation
+originally started MailMan as a spare time project in 1996. The first
+version of MailMan was released through the Endymion Corporation web
+site in 1997 under the GNU Public License, in the hope that people
+would find the software valuable and contribute to its development. In
+the time since then, many people have downloaded MailMan and used the
+application and some have even contributed suggestions and bug fixes,
+but nobody has undertaken further development. Since MailMan has
+survived the test of time, Endymion Corporation has decided to
+pronounce MailMan an official, supported product. We have invested the
+time and resources in developing MailMan version 2.0, a vast
+improvement over the original freeware incarnation of MailMan, and we
+are offering it for license.</p>
+<p>Now for the exceptions. Endymion Corporation automatically grants a
+license for free to installations of MailMan that meet one of the
+following criteria:</p>
+<ul>
+<li>
+</li>Educational Institutions, including government, private, and
+non-profit institutions. In situations where the nature of your
+institution is disputed, Endymion Corporation reserves the right to
+require a copy of your 501(c)(3) form or a local equivalent before
+granting a license.
+<li>
+</li>Non-profit institutions, including religious institutions, but with
+the specific exception of the Church of Scientology International or
+any other organizations directly related to the Church of
+Scientology. Endymion Corporation reserves the right to require a
+United States federal non-profit tax ID number or a local equivalent
+before granting a license.
+<li>
+</li>Private individuals or families.</ul>
+<p>
+All installations of MailMan that do not clearly fit into one of the
+three clearly-defined categories above must be licensed. So that there
+is no confusion, installations of MailMan that must be licensed
+include, but are not limited to, the following examples:</p>
+<ul>
+<li>
+</li>Internet cafe mail kiosks 
+<li>
+</li>Large ISPs 
+<li>
+</li>Small-town ISPs 
+<li>
+</li>Free Internet email services
+<li>
+</li>Corporate messaging applications</ul>
+<p>
+One license must be purchased for each installation of MailMan, but
+each installation can host an unlimited number of users, unlike
+MailMan's primary competition. For current information on MailMan
+licensing policies, please see
+<a href="http://www.endymion.com/products/mailman/licensing.htm">http://www.endymion.com/products/mailman/licensing.htm</a>. For
+a copy of the actual non-commercial installation license agreement
+that accompanies MailMan, see
+<a href="http://www.endymion.com/products/mailman/mmnclic.htm">http://www.endymion.com/products/mailman/mmnclic.htm</a>.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="4.2.">4.2</a>) Why is the MailMan source code no longer open?</b></font><font face="Arial, Helvetica">
+<p>
+MailMan began life as a GPL product. Because of our desire to help to
+move the world forward just a little bit at a time by sharing our
+efforts with others and because of a general sense of honesty and
+openness, we originally made the source code for MailMan available to
+the world under the same non-commercial license that allowed you to
+install and use MailMan. Unfortunately, we were almost immediately
+(less than a week after the release) bitten by pirates. Apparently
+there are people out there that are unable or too lazy to develop
+something like MailMan by themselves, so they just removed the
+"Endymion Corporation" headers from the source code and started trying
+to sell MailMan as their own product. Because of these pirates and
+other abuses we are making the true MailMan source code available only
+to licensees. This does not preclude non-profit organizations from
+obtaining the MailMan source for modification. If you represent a
+verifiable non-profit organization and you are interested in obtaining
+the MailMan source code, just contact mailman@endymion.com for
+information about obtaining the source code through your
+non-commercial license. The final effect of our closing the source
+code is actually very small. Organizations that have a legitimate need
+for the source code for examination or modification need to license
+MailMan anyway, and we continue to make the source available to
+verifiable non-profits.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="4.3.">4.3</a>) What constitutes a single "installation" of MailMan?</b></font><font face="Arial, Helvetica">
+<p>
+A single installation of MailMan is defined as both a unique URL and
+server that is used to access the MailMan application. Most MailMan
+installations will require exactly one server and exactly one URL. For
+instance, Endymion Corporation maintains only one installation of
+MailMan, on a single server that handles our entire corporate web
+site, with a single URL,
+<a href="http://www.endymion.com/products/mailman/demo/mmstd.cgi">http://www.endymion.com/products/mailman/demo/mmstd.cgi</a>. If your
+MailMan installation will be supported by more than one server, all
+with the same URL, each server must be licensed. In a more likely
+scenario, if you operate several virtual domains from the same server
+and each virtual domain makes use of a MailMan installation, each
+different URL that MailMan is known by must be licensed. Having
+several different virtual domains all access a single installation of
+MailMan by the same URL on the same server technically only requires
+one license according to our definitions, but we are a small company
+and that's not a very nice thing to do to us. Please consider doing
+the right thing and licensing each installation.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="4.4.">4.4</a>) Why are you picking on Scientology?</b></font><font face="Arial, Helvetica">
+<p>
+We're not. Our intent is to provide MailMan for free to private
+individuals and to organizations that are acting selflessly and could
+use the applications but might not be able to budget for
+it. For-profit organizations foot the bill in our little Robin Hood
+game. We don't think that this is too much to ask, since the bill
+that we're talking about is miniscule. The Church of Scientology
+does not fit into our definition of "an organization that acts
+selflessly and might not be able to pay for a license." We have
+nothing nasty to say about Scientology or the Church of Scientology
+other than that. To each his own.
+</p>
+</font>
+</p>
+</p>
+<hr>
+<center>
+<font face="Arial, Helvetica" size="5"><b><a name="5.">5.</a> Installation</b></font>
+</center>
+<hr>
+<p>
+<p>
+<font face="Arial, Helvetica" size="4">This section describes how to install MailMan.</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="5.1.">5.1</a>) What is the difference between the different installation
+distributions?</b></font><font face="Arial, Helvetica">
+<p>
+There are two different distributions of each edition of MailMan
+version 3.0.x, a Unix distribution and an NT distribution. In reality
+either distribution should work on any server, but we have found it to
+be more convenient for our users to package the application in a way
+that is more targeted to the final platform. The primary difference
+between the two distributions is that the files in the NT distribution
+have been processed so that the lines in the mail MailMan source file
+end with a CRLF, while the lines in the same file in the Unix
+distribution are terminated with a simple LF. If you don't know
+what that means, don't worry about it, it's really not that
+important usually. Another difference is that the main MailMan source
+file in the Unix distribution is called "mm(something).cgi", while the
+same file in the NT distribution is called "mm(something).pl". We have
+found that this arrangement reduces confusion in most cases. If you
+disagree about our file naming conventions you are perfectly welcome
+to rename the files to whatever you want.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="5.2.">5.2</a>) What are the files included in a MailMan distribution?</b></font><font face="Arial, Helvetica">
+<p>
+A MailMan distribution contains three major parts: the templates, the
+scripts, the graphics, and documentation. There will be some minor
+differences between the editions of MailMan (standard or
+professional), but these are not of great note.</p>
+<ul>
+<li>
+</li>Templates: All templates are named t_*.htm or t_f_*.htm.
+<li>
+</li>Scripts: The scrips will all end in .pl or .cgi.  The Mailman
+script name follows a convention:
+<ul>
+<li>
+</li>All Mailman scripts start with "mm".
+<li>
+</li>Mailman Standard contains "std", Mailman Pro contains "pro".
+<li>
+</li>Scripts with obfuscated code then contain "o".
+<li>
+</li>Depending on whether your Mailman distribution is a demo or
+licensed, it will end with "d" or "l".
+</ul>
+<li>
+</li>Graphics: All graphics are names i_*.gif.
+</ul>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="5.3.">5.3</a>) What is the basic installation procedure?</b></font><font face="Arial, Helvetica">
+<p>
+The OS-specific installation instructions provide more detail on
+Mailman installation.  This section provides a simple overview of the
+process.</p>
+<p>
+<ol>
+<li>
+</li>Unpack your distribution.  
+<li>
+</li>Copy the distribution to the location on your web server where it
+will be installed, "/public_html/mailman/" for example.
+<li>
+</li>Make sure that the following files are present: the Mailman CGI
+file (the filename will vary between installations.  Please see
+section 5.2 for the way to determine the CGI's filename), all of the
+"i_*.gif" files, and all of the "t_*.htm" files.
+<li>
+</li>Make sure that your copy of the Mailman CGI is executable, and is
+executable by your web server. If you don't know how to do this,
+consult an expert on your operating system and web server.  That's it,
+it looks too simple to believe, but that is the basic process. In most
+cases it will be that simple, and MailMan will run "out of the
+box". Once you have performed the above three steps, merely access the
+application through the URL that you have given it. In the above
+example, the URL to access MailMan would likely be
+<a href="http://yourserver/mailman/mmstdo.cgi">http://yourserver/mailman/mmstdo.cgi</a> or
+<a href="http://yourserver/mailman/mmstdo.pl">http://yourserver/mailman/mmstdo.pl</a>
+</ol>
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="5.4.">5.4</a>) What is the installation procedure for a Unix system?</b></font><font face="Arial, Helvetica">
+<p>
+This item provides a more detailed explanation of the above procedure
+for Unix systems. Before you install MailMan, make sure that you have
+Perl 5 installed. On most Unix systems, especially web hosting
+systems, Perl will already be installed. If Perl is not installed, or
+if Perl version 5 is not installed, consult your system administrator.</p>
+<p>
+<ol>
+<li>
+</li>Copy the distribution to the location that you want to unpack it
+in, "/public_html/mailman/", for example.  
+<li>
+</li>Unpack the distribution with tar. On most systems you can type
+"tar -zxvf (distribution).tgz" and your system will expand the
+file. You should now have a collection of "i_*.gif" files, "t_*.htm"
+files, the Mailman CGI (see section 5.2 for the filename convention),
+and some documentation (this document, in particular). On systems
+where that doesn't work, try "gnutar zxvf (distribution).tgz". If that
+doesn't work, you will have to manually unzip the file with "gunzip"
+and then untar the file with "tar -xvf (distribution).tar". If all
+else fails, fetch the NT distribution and unzip it.
+<li>
+</li>Make sure that your copy of the Mailman CGI is executable by
+doing "chmod 755 (mailman CGI file)".  Also, just to be sure, make
+sure that your "t_*.htm" and "i_*.gif" files are marked so that the
+web server process can read them. Sometimes you can read your own
+files, but you inadvertently have your files set so that your web
+server can't access them. These are the same rules that you should be
+following when you publish ordinary web content. "chmod 644 i_*.gif
+t_*.htm" should do the trick.
+<li>
+</li>Make sure that the first line of the Mailman CGI file refers to
+the correct location of your Perl interpreter. Be warned that it
+probably does not. You can find out where your Perl interpreter is
+located on most Unix systems by typing "where perl" on the command
+line. Some system administrators keep Perl 4 and Perl 5 both installed
+at the same time, with "perl" referring to Perl 4 and "Perl" or
+"perl5" referring to Perl 5. If your system operates this way, make
+sure that you are referring to the correct location of Perl 5. MailMan
+will not operate with Perl 4.
+<li>
+</li>Check your installation by loading your Mailman CGI in your web
+browser through your web server. In the above example, the URL to
+access MailMan might be
+<a href="http://yourserver/mailman/mmstdod.cgi">http://yourserver/mailman/mmstdod.cgi</a>.
+</ol>
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="5.5.">5.5</a>) What is the installation procedure for an NT system?</b></font><font face="Arial, Helvetica">
+<p>
+This item provides a more detailed explanation of the above
+procedure for NT systems. Before you install MailMan on an NT system,
+make sure that you have Perl 5 installed. For more information on
+where to get Perl 5 and how to install and configure it for NT, please
+consult Evangelo Prodromo's Perl for Win32 FAQ at
+<a href="http://www.endcontsw.com/people/evangelo/Perl_for_Win32_FAQ.html">http://www.endcontsw.com/people/evangelo/Perl_for_Win32_FAQ.html</a>
+</p>.
+<p>
+<ol>
+<li>
+</li>Copy the distribution to the location that you want to unpack it
+in. The path "/public_html/mailman/" is used in the above example.
+<li>
+</li>Unpack the distribution with your favorite unzip utility.  
+<li>
+</li>If you are using IIS, make sure that the directory where your
+MailMan installation resides is marked executable in the IIS
+administration interface. Also make sure that your Mailman CGI file
+(see section 5.2 for naming convention of this file) ends in an
+extension that will be recognized by your system as a Perl 5
+script. Most of the time "(mailman file name).pl" will do the trick,
+but your installation of Perl 5 may be different.  
+<li>
+</li>Check your installation by loading "(mailman file name).pl" in
+your web browser through your web server. In the above example, the
+URL to access MailMan might be
+<a href="http://yourserver/mailman/mmstdod.pl">http://yourserver/mailman/mmstdod.pl</a>.
+</ol>
+NT systems seem to be very, very resistant to running Perl scripts
+without serious hassle, and NT administrators are generally unfamiliar
+with dealing with this sort of thing, so we have provided a few more
+tips for NT installations that we have developed over time:
+On some NT systems, when you try to run MailMan you are presented with
+completely un-helpful error messages like 'The script misbehaved by
+producing no output' and things like that. We have worked out a simple
+process to get the system up and running that starts out by running
+the script alone, without going through CGI, then slowly builds up to
+running through CGI through the server:<ol>
+<li>
+</li>To test that the script itself is working okay under simple conditions:
+<ul>
+<li>
+</li>Switch to the directory that MailMan is installed in via the
+command line, DOS prompt, etc.  
+<li>
+</li>Do 'C:', then 'cd path\to\mailman', then do 'perl (Mailman CGI
+file)', or 'c:\perl5\bin\perl (Mailman CGI file)', or a similar
+command that will execute your Mailman CGI file. 
+<li>
+</li>You should see a bunch of HTML code for the login page, if that
+works okay then your script is fine. Otherwise, that's where you have
+problems.
+</ul>
+<li>
+</li>To test that the script has the path information set up correctly
+so that it will run even when IIS screws up the 'current directory'
+when it runs, do this:
+<ul>
+<li>
+</li>Switch to some other directory, say the root of the C: drive.
+<li>
+</li>Run MailMan by executing a command similar to the one used in
+step 1 (for example: 'perl inetpub\wwwroot\mmstdod.pl').
+<li>
+</li>If the path information is correctly set up, it should still be
+able to locate the template for the login page. Otherwise, that's where
+you have problems.
+</ul>
+<li>
+</li>Now try to get it working through CGI, if the above two tests work
+then we're not sure why this might break, but under NT anything is
+possible.
+</ol>
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="5.6.">5.6</a>) I installed MailMan and it doesn't work, what do I do?</b></font><font face="Arial, Helvetica">
+<p>
+When Mailman installation fails, it's usually a common error.
+Check these things first.</p>
+<p>
+<ul>
+<li>
+</li>Make sure that you have your permissions set on the file "mmstdod.cgi"
+(or "mmstdod.pl") so that it is executable. The exact mechanism of
+doing this is different on every operating system. Under Unix, make
+sure that the permissions on both files read "-rwxr-xr-x" when you do
+an "ls -alt". You manage this with "chmod 755 mmstdo.cgi". If you're
+using any other OS, ask an expert on your OS.
+<li>
+</li> Make sure that your web server understands that a file ending in
+".cgi" (or ".pl" or whatever your copy is called) is a CGI script and
+that it should run your Mailman CGI file when you invoke it. If your
+web server isn't happy with the ".cgi" extension, feel free to rename
+it to ".pl" or ".runthis" or whatever makes your web server happy. If
+you change the extension, or even the name, of mailman, you shouldn't
+have to change anything else and it should just run. MailMan
+dynamically identifies its own location each time it runs. 
+<li>
+</li>This one varies from web server to web server, and if you don't
+know how to deal with this issue, ask an expert on your web server.
+Make sure that MailMan's templates are readable to your web
+server. Keep in mind that just because they are marked readable to
+you, they are not necessarily marked readable to your web server,
+since the server generally runs as a different user. In Unix, you
+probably want your permissions for your "t_*.htm" files to read
+"-rw-r--r--", which you can achieve with "chmod 644 t_*.htm". On any
+other OS, if you don't already know how to do it, ask an expert on
+your OS.
+<li>
+</li>Make sure that MailMan's templates are located in the directory
+that your web server will set to the 'current' directory when MailMan
+runs. This will USUALLY be the same directory that the script is
+located in, but not necessarily. Some web servers set the current
+directory to places other than where the script itself is located. If
+you have one of these servers and MailMan runs but your templates are
+AWOL, consult with your sysadmin or an expert on your web server, or
+see section 5.7 of this FAQ.</ul>
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="5.7.">5.7</a>) What does it mean when I try to run MailMan and the server
+says "Can't locate mmcgilib.pl"?</b></font><font face="Arial, Helvetica">
+<p>
+The most likely cause of an error complaining about not being able to
+find "mmcgilib.pl" is that MailMan is "lost". This happens when
+your server runs your CGI applications with a current directory other
+than the actual directory that the application is located in. If your
+MailMan installation is in "/public_html/mailman/mmstdo.cgi" for
+instance, your server might instantiate MailMan with
+"/public_html/mailman/mmstdo.cgi" as the current directory, in which
+case everybody is happy. It also might instantiate MailMan with
+"/usr/local/somedir/" as the current directory, in which case MailMan
+has no way of locating its own templates and dependencies.</p>
+<p>
+Luckily,there is a simple fix for this. At the top of the
+"mmstdod.cgi" file (or whatever your file happens to be called) there
+is a line that allows you to manually set the variable
+"$strLocalScriptLocation" to an absolute path that describes the
+location of your MailMan installation. In the above example you would
+set "$strLocalScriptLocation" to "/public_html/mailman/", letting
+MailMan know where it should look for dependencies and templates. Note
+that "$strLocalLocationScript" must be a complete directory name, with
+an absolute root and the terminating "/" or "\" character, depending
+on your operating system and file system. If you have problems with
+this, you will probably also have problems finding your templates once
+MailMan is running, so you should probably start out by setting
+"$strLocalTemplateLocation", which will automatically (by default) set
+"$strLocalScriptLocation" as well.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="5.8.">5.8</a>) My server gives me this error: "Can't locate Socket.pm in
+@INC", what does that mean?</b></font><font face="Arial, Helvetica">
+<p>
+That indicates that your Perl interpreter can't find the Perl module
+Socket.pm. That module should be a standard part of your Perl 5
+installation, if it is not found then your Perl installation is
+damaged or incomplete. This is an extremely common problem with
+Solaris servers for some reason, downloading the latest version of
+Perl and reinstalling will almost always fix this problem.
+</p>
+</font>
+</p>
+</p>
+<hr>
+<center>
+<font face="Arial, Helvetica" size="5"><b><a name="6.">6.</a> Operation</b></font>
+</center>
+<hr>
+<p>
+<p>
+<font face="Arial, Helvetica" size="4">This section describes how to work MailMan from a user's
+point of view.</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="6.1.">6.1</a>) How would I use MailMan in conjunction with a "primary"
+mailer on my home or office system?</b></font><font face="Arial, Helvetica">
+<p>
+We wish that there were other sources that we could reference that
+could explain the basics of using several different mailers at
+once. Unfortunately we don't know of any. If you know of any good
+write-ups with suggestions for novice users on this subject please let
+us know.</p>
+<p>
+The key issue involved is configuring your mailer to leave its
+messages on the Internet mail server after it has downloaded them. If
+you receive a message from your boss on your computer at work and you
+decide that you would really rather go home and reply to the message
+after dinner, you can't do that if your mailer at work deletes the
+message from the server after it checks the message. If you set your
+mailer at work to not delete the message from the server, when you get
+home and check your mail, the message will still be there waiting for
+you to reply to it. Using MailMan in conjunction with other mailers is
+no different. All that you need to do is configure all of your mailers
+to leave messages on the mail server by default, and perhaps select
+one mailer as your 'official' mailer that is allowed to delete your
+messages. Most quality mail clients have options to leave messages on
+the server but delete them after a set number of days have
+passed. This option is extremely helpful when using many different
+mail clients to access the same mailbox.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="6.2.">6.2</a>) Wouldn't IMAP be very well-suited to this type of
+scenario?</b></font><font face="Arial, Helvetica">
+<p>
+Yes, IMAP is the perfect solution to the problem of synchronizing
+multiple different internet client applications. IMAP supports
+persistent mail storage in folders on the server side so that all mail
+clients, regardless of location, have a synchronized impression of
+what the user's current mail situation is like. MailMan does not
+currently support IMAP because it is aimed at a different market
+niche.  MailMan is designed as a product that enables administrators
+of existing POP3 servers to easily add web mail support for their
+users.  If you are setting up a web mail system from scratch, then an
+IMAP server would be ideal.  Our Sake Mail product is much better
+suited to this than MailMan.  Information on Sake Mail is available at
+<a href="http://www.endymion.com/products/sake/mail/">http://www.endymion.com/products/sake/mail/</a>.  Sake Mail is
+basically equivalent to MailMan in concept, but is a newer product
+that was designed from the ground up for enhanced performance and
+scalability over a Perl/CGI solution.  Sake Mail supports both POP3
+and IMAP, and is generally more full-featured than MailMan.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="6.3.">6.3</a>) When I try to send a message, I get: "Error 550: Relay
+(permission) denied.", what's up?</b></font><font face="Arial, Helvetica">
+<p>
+Most well configured SMTP servers will not allow a user from outside
+of their own local domain to send a message to users that are also
+outside of that domain. You can send a message in from outside, or out
+from inside, but you can't send a message to your buddy at IBM through
+the MindSpring SMTP servers if you are, say, at AOL. This is to
+prevent spammers from abusing SMTP servers. This will happen if you
+are using a MailMan installation at a different location than your
+SMTP server. The easiest way to solve this problem would be to
+configure MailMan to use an SMTP server that will grant permission to
+the HTTP server machine that MailMan is installed on to send
+messages. You can also provide a default name for a server that is
+known to allow messages from the HTTP server machine.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="6.4.">6.4</a>) I get this message every single time I use MailMan: "Your
+MailMan session was initiated from a different network address than
+your current location. For security reasons, MailMan will not
+continue. You must log in again from this location to continue." How
+do I stop it?</b></font><font face="Arial, Helvetica">
+<p>
+This is a security feature to prevent a MailMan session from getting
+'hijacked' from another address. MailMan keeps track of the IP address
+that your session was initiated from and if subsequent requests come
+from a different IP address it produces that error. Getting cut off
+from an ISP's dialup line and reconnecting will usually cause this
+error. Even if you are not actually jumping around from address to
+address, sometimes the configuration of the server can cause an
+appearance that you are. Clusters of caching proxy servers can cause
+this problem, as can lots of new IP routing features.</p>
+<p>
+The easiest way around the problem is to disable the IP test entirely,
+it's called the "Hijack Test". Comment out the line that sets the
+configuration variable "$bUseHijackTest" to TRUE, and MailMan won't
+perform this test any more.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="6.5.">6.5</a>) Mailman has been working fine for a while, but now it
+returns an error about "premature headers." How do I fix
+this?</b></font><font face="Arial, Helvetica">
+<p>
+Mailman's demos are designed to expire after 30 days of use. Until
+Mailman v3.0.10, this expiration process was rather sudden- the cgi
+scripts powering Mailman would simply refuse to run. When the scripts
+seize up like this, the common response from the webserver is "Server
+Error: the script returned premature headers." As of Mailman
+v3.0.10, this process has been replaced with an output message letting
+users know that Mailman has expired. Of course, this problem should
+not occur on licensed copies of Mailman.
+</p>
+</font>
+</p>
+</p>
+<hr>
+<center>
+<font face="Arial, Helvetica" size="5"><b><a name="7.">7.</a> Customization</b></font>
+</center>
+<hr>
+<p>
+<p>
+<font face="Arial, Helvetica" size="4">
+This section describes the inner working of MailMan for installation
+administrators that want to customize their installations.</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="7.1.">7.1</a>) How do I customize MailMan to blend into my site and provide
+a branded interface to my users?</b></font><font face="Arial, Helvetica">
+<p>
+All of MailMan's output is defined by a collection of HTML
+templates. The templates are the ".htm" files that begin with "t_" in
+your distribution. We have provided a sample look and feel for MailMan
+that you are welcome to use for as long as you like. When you begin
+the customization process, simply open the templates in any HTML
+editor and make your modifications. Remember that the behavior of
+MailMan is dictated by hidden fields contained within the HTML
+templates, so make sure that you go slowly and check your results
+often, as it may be possible to 'break' your installation by
+accidentally deleting or modifying important keywords. We hope to
+provide more detailed information on what MailMan's keywords are and
+what they mean in this document at a later date.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="7.2.">7.2</a>) Is it possible to "rig" a MailMan installation with a
+default POP3 or SMTP server address so that the user doesn't have
+to enter them?</b></font><font face="Arial, Helvetica">
+<p>
+Yes. The POP3 server used is referred to in the HTML templates by the
+substitution keyword "SERVER". Hunt down everywhere that MailMan
+allows the user to supply this value through a form field. The only
+place where this should happen is in the template "t_login.htm". Find
+this form field:</p>
+<p>&lt;input type="text" name="SERVER" size="30"&gt;</p>
+<p>
+And replace it with:</p>
+<p>&lt;input type="text" name="SERVER" size="30" value="popserver.mydomain.com"&gt;</p>
+<p>
+The box will now be filled in by default for the user when they log
+on, but experienced users will still be able to aim MailMan at
+specific servers.</p>
+<p>
+The SMTP server used by MailMan is specified by the keyword
+"OUTGOING". Change the form fields that set the "OUTGOING" keyword in
+both "t_f_messageform.htm" and "t_nf_messageform.htm" in order to rig
+the outgoing SMTP server to something specific.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="7.3.">7.3</a>) Is it possible to "rig" a MailMan installation with a
+default POP3 or SMTP server address so that the user can't modify
+them even if they want to?</b></font><font face="Arial, Helvetica">
+<p>
+Yes. Find the locations of the servers as described above, and remove
+the entire "&lt;input&gt;" field from your templates entirely. The incoming
+server will need to be removed from "t_login.htm", and if you want to
+rig your SMTP server also then you would need to remove the outgoing
+server specification in both "t_f_messageform.htm" and
+"t_nf_messageform.htm". Finally, set the configuration variables
+"$strIncomingServer" and "$strOutgoingServer" in the MailMan script
+itself, as illustrated in the comments. Those variables are set toward
+the top of the script. If you set these values, then even if a hacker
+attempts to spoof a login page to redirect MailMan to a different
+server, it will always use the servers that you specify.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="7.4.">7.4</a>) Is it possible to 'rig' a MailMan installation to never
+display the frames interface?</b></font><font face="Arial, Helvetica">
+<p>
+Yes, just change the "NOFRAMES" input check box in "t_login.htm" to:</p>
+<p>&lt;input type="hidden" name="NOFRAMES" value="TRUE"&gt;</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="7.5.">7.5</a>) Is it possible to override the domain name displayed in the
+"From" box when a user is sending email?</b></font><font face="Arial, Helvetica">
+<p>
+Yes. MailMan will automatically guess an email address based on the
+user's POP3 username and the server name. In most cases this address
+is either a lot more specific than necessary (i.e.,
+"mailman@mail.it.endymion.com" instead of "mailman@endymion.com") or
+completely wrong (i.e., "endy-mailman@shell1.ba.best.com" instead of
+"mailman@endymion.com"). You can override the default domain name by
+setting the "$strFromDomainName" configuration variable to the domain
+name of your choice. In both of the examples above, we would set the
+value to "endymion.com". This value can only be used for setting the
+domain of the user that is currently logged in.</p>
+<p>
+Note that in the second example above
+("endy-mailman@shell1.ba.best.com") the domain name is not the only
+thing that is incorrect. For cases where the POP3 username does not
+equal the username in the user's email address, you must modify the
+MailMan source to provide a mechanism for translating usernames into
+mail account names.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="7.6.">7.6</a>) My HTTP server requires me to move the image files into a
+directory other than MailMan is installed in, but that breaks the
+image references, what do I do?</b></font><font face="Arial, Helvetica">
+<p>
+It is not possible for MailMan to include a "MailMan()" keyword in the
+templates so that the image URLs can be automatically rewritten. This
+is because the keyword would make the image URLs invalid in the raw
+HTML template files, which would make customizing the templates with
+an HTML editor very difficult. Originally there was no way to correct
+your image URLs other than by actually editing the templates, but this
+is an inconvenient solution. To rectify this situation and make things
+easier for site maintainers, we have included the
+"$strURLImageLocation" configuration variable. This variable contains
+a string that will be prepended to the image URLs when the template is
+processed at runtime. To use this variable, set it to the exact value
+that you want prepended to image names in order to make them into URLs
+that will point to your image directory. For instance, if you bury
+your images in an "images" directory under the directory where MailMan
+is installed, set this to 'images/' (with the slash). If you put your
+images in a completely different directory, something that is rooted,
+like '/mailman/images/' might be what you are looking for. In the most
+extreme cases you can do away with relative URLs entirely and provide
+a complete absolute URL like the one below:</p>
+<p>
+$strURLImageLocation = 'http://www.endymion.com/images/';
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="7.7.">7.7</a>) The "message input" box is too large, and won't fit in my
+browser. How can I make it smaller?</b></font><font face="Arial, Helvetica">
+<p>
+We've done our best to make sure Mailman is cosmetically pleasing
+on as many different kinds of browsers as possible; however, there
+have been some reports of the "message input" field being too large,
+thus making it quite cumbersome to write an email.</p>
+<p>
+There are a couple of remedies for this, actually. They're all
+linked to one line in the template file "t_messageform.htm". The line
+reads as follows:</p>
+<p>&lt;td colspan="2"&gt;&lt;font size="2"&gt;&lt;textarea name="TEXT" rows="20"
+cols="80" maxlength="65000"
+wrap="HARD"&gt;MailMan(MESSAGE)&lt;/textarea&gt;&lt;/font&gt;</p>
+<p>
+The first way you can reduce the size of the large message input box
+is to change the value of the font size tag from 2 to 1. This isn't
+a very pretty solution, but it works. The other option is to change
+the value in the "cols=" expression from 80 to a smaller number. This
+will make the box thinner.
+</p>
+</font>
+</p>
+</p>
+<hr>
+<center>
+<font face="Arial, Helvetica" size="5"><b><a name="8.">8.</a> Common Errors and Problems</b></font>
+</center>
+<hr>
+<p>
+<p>
+<font face="Arial, Helvetica" size="4">
+This section discusses some of the common errors and problems that
+occur during normal Mailman use.</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="8.1.">8.1</a>) What is a 404 Error? What does it mean? How do I remedy
+it?</b></font><font face="Arial, Helvetica">
+<p>
+A 404 Error or Page Not Found Error is the general error message that
+most webservers return when they cannot located a requested file. A
+few possible causes for this error:</p>
+<ul>
+<li>
+</li>The "host" part of the URL (i.e. www.endymion.com) was typed
+correctly, but the "path" part of the URL (i.e. /~nibbles/mail/mmstdod.cgi)
+was not.
+<li>
+</li>The webserver has not been set correctly to recognize the
+path MailMan's CGI scripts reside in. 
+<li>
+</li>The webserver cannot locate
+other parts of the MailMan distribution, such as the template or
+graphics files.
+</ul>
+<p>
+Please check the configuration for your webserver and confirm that it
+has been correctly configured to locate the paths you keep the MailMan
+templates and CGI scripts in before writing to us for technical
+support. Nine times out of ten, a minor misconfiguration in your
+webserver has caused this error. If you still require assistance from
+Endymion, please email the problem and all of the relevant information
+you can think of to mmhelp@endymion.com. Remember that technical
+support can only use the information you give as a basis for solving
+problems. Please be as detailed and specific as possible.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="8.2.">8.2</a>) What is a 501 Error? What is an Internal Server Error? How
+do I remedy it?</b></font><font face="Arial, Helvetica">
+<p>
+A 501 Error or Internal Server Error is the general error message that
+most webservers return when things on the server-side aren't
+running correctly. The error code itself doesn't contain any
+information on what is wrong, and therefore doesn't give any real
+help in diagnosing and fixing problems. Many webservers, upon
+encountering an error of this type, will produce more detailed
+information either at the bottom of the error page or in logfiles on
+the server. This information is greatly more important to solving the
+problem at hand, and should be examined carefully. If assistance from
+Endymion is required, please email the problem and all of this
+relevant information to mmhelp@endymion.com.
+</p>
+</font>
+</p>
+<p>
+<font face="Arial, Helvetica" size="2"><b><a name="8.3.">8.3</a>) What is a "premature end of script headers" error? Why does
+it show up after about a month of use? How do I remedy it?</b></font><font face="Arial, Helvetica">
+<p>
+A "premature end of script headers" error is an error message returned
+by many webservers as a way of saying "the CGI script didn't do
+anything." The error itself doesn't really do much to explain the
+nature of the problem, so there are a few ways to troubleshoot this
+error. First and foremost, check whether you're using a licensed
+copy of MailMan or whether you're using a demo. Next, check your
+version number.</p>
+<p>
+If you're using a demo version of MailMan and the version number is
+lower than 3.0.10 (the current version), then it's quite likely
+that your demo has expired. All MailMan demos expire 30 days after
+they've been downloaded. Versions of MailMan older than v3.0.10 do
+not provide much user feedback when they expire- they simply stop
+working. Starting with MailMan v3.0.10, this error caused by
+expiration has been replaced with a message stating that the program
+has expired.</p>
+<p>
+If you're using a licensed version of MailMan, or if you're using a
+demo and it's been less than 30 days since you downloaded MailMan,
+then it's likely not a problem with product expiration. The next step
+is to run your CGI scripts from a command line (DOS-Prompt, X-Term,
+etc). The exact syntax will vary from system to system, but will
+basically resemble this: "perl mmstdl.cgi". You may need to insert the
+path to your perl interpreter in before "perl"
+(e.g. /usr/local/bin/perl or c:\perl5\bin\perl). This will cause
+MailMan to run in offline mode. It will ask for some information in
+"name=value" format. Simply hit either CTRL-D or CTRL-Z (whichever one
+produces the end-of-file character on your system) and press the ENTER
+key. If MailMan is running correctly, it will output a stream of
+HTML. If it doesn't output anything, or returns an error, then there's
+possibly a problem with MailMan. Please log this information and
+report it to mmhelp@endymion.com for technical support. Please include
+in all technical support emails your OS (and relevant version number
+and kernel version, where applicable), your version of perl, your
+webserver brand and version number, and anything else you might feel
+is relevant.
+</p>
+</font>
+</p>
+</p>
+</body>
+</html>

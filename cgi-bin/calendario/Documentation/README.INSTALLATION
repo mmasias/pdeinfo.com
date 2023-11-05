@@ -1,0 +1,357 @@
+                            BASIC INFORMATION
+
+Name: Extropia's WebCal
+Version: 5.0
+Last Modified: 04-02-98
+
+                              COPYRIGHT
+
+You may use this code according to the terms specified in the "Artistic
+Licnse" included with this distribution.  The license can be found in the
+"Documentation" subdirectory as a file named README.LICENSE. If for some
+reason the license is not included, you may also find it at
+www.extropia.com.
+
+Though you are not obligated to do so, please let us know if you have
+successfully installed this application.  Not only do we appreciate seeing
+the wonderful things you've done with it, but we will then be able to
+contact you in the case of bug reports or security announcements.  To
+register yourself, simply send an email to register@extropia.com.
+
+Finally, if you have done some cool modifications to the scripts,
+please consider submitting your code back to the public domain and getting
+some community recognition by submitting your modifications to the
+Extropia Cool Hacks page.  To do so, send email to hacks@extropia.com
+
+                               DESCRIPTION
+
+This calendar allows multiple users to view, add to, modify and delete
+from a shared calendar. However, though clients can all see all of the
+scheduled events, only the poster of a message can modify that message.
+(This script runs multiple calendars with multiple events databases as
+well).
+
+                BASIC INSTALLATION (UNARCHIVING THE APPLICATION)
+
+Once you have downloaded the TAR file (a single file containing all
+associated files in their relative positions under the root directory),
+transfer the TAR file to an executable directory on your web server and
+untar them.  On UNIX systems, you may type the following at the
+command line:
+
+                          tar xvfp filename.tar
+
+       (If you are using a non-UNIX Operating System, you may 
+       download a TAR/UNTAR program by pointing your Web browser
+       to http://www.shareware.com).
+
+                 BASIC INSTALLATION (SETTING PERMISSIONS)
+
+Your Web server must have permission to read, write or execute as needed.
+Each sub-directory and file in the application has its own correct
+permissions level associated with it.  Once you have unarchived (UNTAR)
+the application, you must then set the correct permissions.  On UNIX
+systems, you will use the "chmod" command.   The following table is a
+quick guide to setting permissions for UNIX servers.
+
+	PERMISSION	COMMAND
+	rwxrwxrwx 	chmod 777 filename		
+	rwxrwxr-x	chmod 775 filename
+	rwxr-xr-x	chmod 755 filename
+	rw-rw-r--	chmod 664 filename
+	rw-r--r--	chmod 644 filename
+
+	Note: Not setting your permissions correctly is the 
+	NUMBER 1 reason why installations fail.  Take time to 
+	get this right.
+
+The actual permissions required for the subdirectories and files used by
+this application are listed in the next section.
+
+         BASIC INSTALLATION (FILES, DIRECTORIES, AND PERMISSIONS)
+
+The TAR file will then expand into a root directory called Calendar.
+Calendar will contain several sub-directories and several files.  
+The diagram below depicts the directory structure as well as the
+permissions which must be applied to the files and subdirectories used by
+the application.
+
+Calendar Root Directory (drwxr-xr-x)
+   |____Calendar_session_files Sub-directory (drwxrwxrwx)
+   |____Databases Sub-directory (drwxrwxrwx)
+   |       |____Personal Subdirectory (drwxrwxrwx)
+   |       |       |____calendar.counter (-rw-rw-rw-)
+   |       |       |____calendar.events (-rw-rw-rw-)
+   |       |       |____calendar.users (-rw-rw-rw-)
+   |       |____calendar.counter (-rw-rw-rw-)
+   |       |____calendar.events (-rw-rw-rw-)
+   |       |____calendar.users (-rw-rw-rw-)
+   |____Library Sub-directory (drwxr-xr-x)
+   |       |____auth-extra-html.pl (-rw-r--r--)
+   |       |____auth-extra-lib.pl (-rw-r--r--)
+   |       |____auth-lib-fail-html.pl (-rw-r--r--)
+   |       |____auth-lib.pl (-rw-r--r--)
+   |       |____auth-server-lib.pl (-rw-r--r--)
+   |       |____auth_fail_html.pl (-rw-r--r--)
+   |       |____cgi-lib.pl (-rw-r--r--)
+   |       |____cgi-lib.sol (-rw-r--r--)
+   |       |____date.pl (-rw-r--r--)
+   |       |____mail-lib.pl (-rw-r--r--)
+   |____calendar.cgi (-rwxr-xr-x)
+   |____calendar.setup (-rw-r--r--)
+
+
+Calendar is the root directory for the application and must have its
+	permissions set to be readable and executable by the web server.
+
+Calendar_session_files is a subdirectory used by the authentication
+	library files to store authentication session information.  This
+	directory must be set to be readable, writable and executable by
+	the web server and will automatically write and prune temp and
+	dat files.
+
+Databases is a subdirectory containing various data files used by the
+	script.  The subdirectory itself must be readable, writable and
+	executable and will contain three files (calendar.counter,
+	calendar.events, and calendar.users) and one subdirectory
+	(Personal) by default.
+
+	calendar.counter is a file which is used to keep track of the
+	unique event id numbers that are used to manage the events data file.
+	Every event must have its own unique id number if the script is
+	going to be able to make modifications and deletions.  The file
+	itself must be readable and writable by the web server and should
+	initially contain a single one as the only line.  The script will
+	automatically increment this number as events are added to the
+	database.
+
+	calendar.events is the data file containing events that people
+	have entered in.  Each events file will follow the generic data
+	file format as follows:
+
+        Every data file is simply a pipe (|) delimited database using a
+        newline to represent a new database row.  For example, the first
+        line might read:
+
+	1|8|1996|selena|Selena|Sol|selena@eff.org|test|09:00|testing|2
+
+        As you can see, every database field is separated by the pipe
+        symbol (which means that the pipe symbol may not appear in your
+        data!).  In this example, field one is the day, field two
+        is the month, field three is the year, and field four is the
+        username of the poster, five and six are the user's first and
+	last names, seven is the email address, eight is the subject,
+	nine is the  event time, ten is the message body and eleven is the
+	unique event id number.
+
+        Every database row MUST have a unique database id number, so if
+        you want to add database rows manually, you must make sure to add
+        this final field carefully.
+
+        Comment lines are acceptable within the data file, but they must
+        be specified using the comment tag "COMMENT:" flush against the
+        left margin.  The first line of video.data uses a comment line to
+        describe the database fields as follows:
+
+        COMMENT: day|month|year|username|FirstName|LastName......
+
+	calendar.users will contain the list of all the registered users
+	and their personal info.  The file must be readable and writable
+	by the web server and will be filled automatically using the auth
+	libraries.  Note that if you want to add an administrator user, they 
+        must register as a plain user and then you must go in and actually 
+	modify this file by changing their group to admin instead of user.
+
+	Personal is a sample subdirectory for a secondary calendar based
+	on the same application.  It contains its own user, event and
+	counter file and would be used if you wanted to run a second
+	calendar using the same scripts.  Any subsequent calendars must
+	have their own directories created and all must be readable
+	writable and executable.
+
+Library is a subdirectory containing the supporting library
+	routines for this application.  The directory itself must be
+	readable and executable by the web server and each of the files
+	must be readable.
+
+	Authentication libraries all begin with the prefix "auth" and are
+	used to authenticate users if the admin decides to have password
+	authentication.
+
+	cgi-lib.pl is used to read and parse incoming form data and to
+	provide error messages in case the script cannot open a needed file.
+
+	cgi-lib.sol is used for counter and lock file routines.
+
+	date.pl is used for various date conversion routines.
+
+	mail-lib.pl is used to mail the sysadmin foe new registrations if
+	it has been configured to do so.  make sure to set the location
+	of sendmail in the first lines of the library.
+	
+calendar.cgi is the meat of the application and must be set to be readable
+	and executable by the web server.
+
+calendar.setup is the file used to define server specific variables and
+	options.  The file must be readable by the web server and defines
+	the following variables:
+
+	$lib is the location of your perl cgi library.  If you do not
+	have a library, you may just want to dump all the scripts into one
+	directory and assign that path to this variable. (or make
+	$lib = "."; which will reference the library files in the
+	same directory as this script is placed). WARNING:  This variable
+	must ALSO be set in the main script, calendar.cgi...don't forget!
+
+	$this_script_url is the location of the main script...since we
+	are going to refer to it from here, and theoretically, this file
+	will be in the same directory, you only really need to state the
+	name of the script. If that is the case, and you don't change the
+	name of the file, don't bother changing this variable.
+
+	$the_current_year is pretty obvious.  Set this to the current year.
+
+	$greatest_year is the greatest year that you want people to be able to
+	submit calendar events for on the Add Item Form.
+
+	$database_file is the location of the file which contains the calendar
+	database.  Also, we are going to tag on the value of
+	$calendar_type which will be given to us by the main script,
+	calendar.cgi.  In short, $calendar_type is a value set by the
+	initial link via URL encoding (i.e.:...calendar.cgi?calendar=Personal) 
+	Thus the $calendar_type should be the directory name of each
+	separate calendar.  If I were you, I would not change this
+	variable...the only reason is if you don't like my file naming
+	conventions and want to use something besides calendar.events...or
+	maybe you are working with DOS and you can only have 8.3
+	filenames...
+
+	$counter_file is the path of the file that you are using to keep
+	track of unique id numbers.  In order to make deletions and
+	modifications, we must have a unique id number so that this script
+	can determine which database item it should delete.  These ID	
+	numbers should always be the last field in any database row.  Again,
+	because we need to isolate each of the calendars, we will reference the
+	counter file including the $calendar_type variable.  Unless you must,
+	leave this alone too.
+
+	$temp_file is a file that we'll use to temporarily store various data
+	at various times.  Unless you must, leave this alone too.
+
+	$lock_file is a file that we'll use to make sure that only one
+	person can modify the database at any given time.  Unless you must,
+	leave this alone too
+
+	$auth_lib is a variable that we need for authentication.  Since it is
+	the same as $lib, don't worry about changing it.
+
+	$auth_server asks whether or not you are using server-based
+	security or CGI based security.  If you do not know what server
+	based security is, you are most likely dealing with CGI-based
+	security.  Server based security would deal with
+	ENV{'REMOTE_USER'} and you would be using the servers config
+	files...  CGI-based security creates its own authentication
+	routines.
+
+	$auth_user_file is the file which contains the list of users who are
+	validated to use the script.  Unless you have a problem with the name
+	I've given it, you should probably not change this either.
+
+	$auth_alt_user_file is a file that you can use to store
+	registered users before you add them to the user database if you
+	are not allowing users to add themselves instantaneously.  I don't
+	use this for this script, so I left it blank...if you want users
+	to first go through you before they have access, you'll need to
+	set this to like temp.user.file or something like this...then
+	you'll go in every now and then and cut and paste the users you
+	want to validate from here to the real users file.
+
+	$auth_default_group is the default group that you want all users
+	set to when they register.  You can create different security
+	levels by manually editing the user file to change this to
+	something like admin...
+
+	if $auth_add_register is on then the users will be added directly
+	to the user database.  If it is off, they won't. 
+
+	if$auth_email_register is on, you will be emailed when people
+	register so that you can add them yourself.  Thus, at least one of
+	the next two must be set to on.
+
+	$auth_admin_from_address is the address of who the mail should come
+	from.  This is a must.
+
+	$auth_admin_email_address is the email of the admin who is to receive
+	registration notes.
+	
+	$auth_session_length is the number of days that you want session
+	files to be kept for before they are deleted.
+
+	$auth_session_dir is the location of the directory which will
+	temporarily hold session files.  These session files will be used
+	to validate users and to keep track of their information should we
+	need it.
+
+	$auth_register_message is the message that you want to appear
+	when the users are registered.
+
+	@day_names is an array containing the names of the weekdays.
+
+	@month_names...yup, you got it...a list of month names
+
+	%MONTH_ARRAY is an associative array which pairs month names with
+	their numbers.
+
+	%TIME is an associative array which pairs time names with military time
+	values.
+
+	@time_values is just an ordered list of military time values
+
+	%FIELD_ARRAY is an associative array which pairs database field names
+	with their variable names.
+
+	@field_names is the list of database fields.
+
+	@field_values is the list of the variable names associated with the
+	database fields in @field_names.  By the way...the reason that we
+	don't just use keys and values commands to define the arrays
+	relative to all the associative arrays is because we want to
+	actually predefine an order to them.  If we used keys and
+	values..we would lose our order in the hash table.
+
+	$field_num_time is the array number of the event_time field in the
+	database.  We need this in order to sort the database by time so
+	that when you click on a day view, the day events actually come up
+	in order of time. Remember that arrays count from zero, not one.
+
+			   RUNNING THE SCRIPT
+Make sure that you are using Perl 5.0 or better and that the first line of the 
+executable points to the location of perl on your server.  For example, if your
+Perl interpreter is located in the "/usr/local/sbin" directory, you should 
+change the first line to read:
+
+			#!/usr/local/sbin/perl -T
+
+When you want to view the calendar from the web, simply reference it
+as you would an HTML document. For, instance, something like...
+
+          http://www.foobar.com/cgi-bin/Calendar/calendar.cgi
+
+Depending on your usage, you may also have separate directories for
+other calendars which you want to run off the main script.
+These calendars will be accessed by encoding the URL string that you
+call the main script with.  For example, if you have a calendar
+called Personal in addition to the Main calendar, you would type in
+the location window something like the following...
+
+   http://www.foobar.com/cgi-bin/Calendar/calendar.cgi?calendar=Personal
+
+This would create an entirely different calendar with entirely
+different user file and events database.  However, you will need to
+create a subdirectory called Personal (i.e.: calendar=Personal) and
+fill that directory with calendar.counter, calendar.events, and
+calendar.users.
+
+               TECHNICAL SUPPORT
+
+Further technical support can be found at www.extropia.com

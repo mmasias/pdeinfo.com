@@ -1,0 +1,68 @@
+# WebCal Data File
+# Equinoxes & Solstices; Daylight Savings Time (1995-2005)
+19950321|Vernal Equinox|
+19950402|Daylight Savings Time Begins|
+19950621|Summer Solstice|
+19950923|Autumnal Equinox|
+19951022|Daylight Savings Time Ends|
+19951222|Winter Solstice|
+19960320|Vernal Equinox|
+19960407|Daylight Savings Time Begins|
+19960621|Summer Solstice|
+19960922|Autumnal Equinox|
+19961027|Daylight Savings Time Ends|
+19961221|Winter Solstice|
+19970320|Vernal Equinox|
+19970406|Daylight Savings Time Begins|
+19970621|Summer Solstice|
+19970922|Autumnal Equinox|
+19971026|Daylight Savings Time Ends|
+19971221|Winter Solstice|
+19980320|Vernal Equinox|
+19980405|Daylight Savings Time Begins|
+19980621|Summer Solstice|
+19980923|Autumnal Equinox|
+19981025|Daylight Savings Time Ends|
+19981222|Winter Solstice|
+19990321|Vernal Equinox|
+19990404|Daylight Savings Time Begins|
+19990621|Summer Solstice|
+19990923|Autumnal Equinox|
+19991024|Daylight Savings Time Ends|
+19991222|Winter Solstice|
+20000320|Vernal Equinox|
+20000402|Daylight Savings Time Begins|
+20000621|Summer Solstice|
+20000922|Autumnal Equinox|
+20001022|Daylight Savings Time Ends|
+20001221|Winter Solstice|
+20010320|Vernal Equinox|
+20010401|Daylight Savings Time Begins|
+20010621|Summer Solstice|
+20010922|Autumnal Equinox|
+20011028|Daylight Savings Time Ends|
+20011221|Winter Solstice|
+20020320|Vernal Equinox|
+20020407|Daylight Savings Time Begins|
+20020621|Summer Solstice|
+20020923|Autumnal Equinox|
+20021027|Daylight Savings Time Ends|
+20021222|Winter Solstice|
+20030321|Vernal Equinox|
+20030406|Daylight Savings Time Begins|
+20030621|Summer Solstice|
+20030923|Autumnal Equinox|
+20031026|Daylight Savings Time Ends|
+20031222|Winter Solstice|
+20040320|Vernal Equinox|
+20040404|Daylight Savings Time Begins|
+20040621|Summer Solstice|
+20040922|Autumnal Equinox|
+20041024|Daylight Savings Time Ends|
+20041221|Winter Solstice|
+20050320|Vernal Equinox|
+20050403|Daylight Savings Time Begins|
+20050621|Summer Solstice|
+20050922|Autumnal Equinox|
+20051023|Daylight Savings Time Ends|
+20051221|Winter Solstice|

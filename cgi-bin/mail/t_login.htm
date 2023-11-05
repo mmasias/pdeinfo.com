@@ -1,0 +1,343 @@
+<html>
+<head>
+<meta http-equiv="pragma" content="no-cache">
+<title>MailMan Login</title>
+MailMan(KIOSKMODESCRIPT)
+<!-- MailManSnippet(KIOSKMODESCRIPT)
+<script language="JavaScript">
+MailMan(HTMLCOMMENTBEGIN)
+// Ultimate client-side JavaScript client sniff.
+// (C) Netscape Communications 1998.  Permission granted to reuse and distribute.
+// Revised 20 April 98 to add is.nav4up and is.ie4up (see below).
+
+// Everything you always wanted to know about your JavaScript client
+// but were afraid to ask ... "Is" is the constructor function for "is" object, 
+// which has properties indicating:
+// (1) browser vendor:
+//     is.nav, is.ie, is.opera
+// (2) browser version number:
+//     is.major (integer indicating major version number: 2, 3, 4 ...)
+//     is.minor (float   indicating full  version number: 2.02, 3.01, 4.04 ...) 
+// (3) browser vendor AND major version number
+//     is.nav2, is.nav3, is.nav4, is.nav4up, is.ie3, is.ie4, is.ie4up
+// (4) JavaScript version number:
+//     is.js (float indicating full JavaScript version number: 1, 1.1, 1.2 ...)
+// (5) OS platform and version:
+//     is.win, is.win16, is.win32, is.win31, is.win95, is.winnt, is.win98
+//     is.os2
+//     is.mac, is.mac68k, is.macppc
+//     is.unix
+//        is.sun, is.sun4, is.sun5, is.suni86
+//        is.irix, is.irix5, is.irix6 
+//        is.hpux, is.hpux9, is.hpux10
+//        is.aix, is.aix1, is.aix2, is.aix3, is.aix4  
+//        is.linux, is.sco, is.unixware, is.mpras, is.reliant  
+//        is.dec, is.sinix, is.freebsd, is.bsd 
+//     is.vms
+//
+// See http://www.it97.de/JavaScript/JS_tutorial/obj_hierarchy/navobjFr.html
+// for a detailed list of userAgent strings.
+//
+// Note: you don't want your Nav4 or IE4 code to "turn off" or
+// stop working when Nav5 and IE5 (or later) are released, so
+// in conditional code forks, use is.nav4up ("Nav4 or greater")
+// and is.ie4up ("IE4 or greater") instead of is.nav4 or is.ie4
+// to check version in code which you want to work on future 
+// versions.
+
+function Is ()
+{   // convert all characters to lowercase to simplify testing
+    var agt=navigator.userAgent.toLowerCase()
+
+    // *** BROWSER VERSION ***
+    this.major = parseInt(navigator.appVersion)
+    this.minor = parseFloat(navigator.appVersion)
+
+    this.nav  = ((agt.indexOf('mozilla')!=-1) && ((agt.indexOf('spoofer')==-1)
+                && (agt.indexOf('compatible') == -1)))
+    this.nav2 = (this.nav && (this.major == 2))
+    this.nav3 = (this.nav && (this.major == 3))
+    this.nav4 = (this.nav && (this.major == 4))
+    this.nav4up = this.nav && (this.major >= 4)
+    this.navonly      = (this.nav && (agt.indexOf(";nav") != -1))
+
+    this.ie   = (agt.indexOf("msie") != -1)
+    this.ie3  = (this.ie && (this.major == 2))
+    this.ie4  = (this.ie && (this.major == 4))
+    this.ie4up  = this.ie  && (this.major >= 4)
+
+    this.opera = (agt.indexOf("opera") != -1)
+     
+    // *** JAVASCRIPT VERSION CHECK *** 
+    // Useful to workaround Nav3 bug in which Nav3 
+    // loads <SCRIPT LANGUAGE="JavaScript1.2">.
+    if (this.nav2 || this.ie3) this.js = 1.0
+    else if (this.nav3 || this.opera) this.js = 1.1
+    else if (this.nav4 || this.ie4) this.js = 1.2
+    // NOTE: In the future, update this code when newer versions of JS 
+    // are released. For now, we try to provide some upward compatibility 
+    // so that future versions of Nav and IE will show they are at 
+    // *least* JS 1.2 capable. Always check for JS version compatibility 
+    // with > or >=.
+    else if ((this.nav && (this.minor > 4.05)) || (this.ie && (this.major > 4))) 
+         this.js = 1.2
+    else this.js = 0.0 // HACK: always check for JS version with > or >=
+
+    // *** PLATFORM ***
+    this.win   = ( (agt.indexOf("win")!=-1) || (agt.indexOf("16bit")!=-1) )
+    // NOTE: On Opera 3.0, the userAgent string includes "Windows 95/NT4" on all
+    //        Win32, so you can't distinguish between Win95 and WinNT.
+    this.win95 = ((agt.indexOf("win95")!=-1) || (agt.indexOf("windows 95")!=-1))
+
+    // is this a 16 bit compiled version?
+    this.win16 = ((agt.indexOf("win16")!=-1)
+               || (agt.indexOf("16bit")!=-1) || (agt.indexOf("windows 3.1")!=-1)
+               || (agt.indexOf("windows 16-bit")!=-1) )  
+
+    this.win31 = (agt.indexOf("windows 3.1")!=-1) || (agt.indexOf("win16")!=-1) ||
+                 (agt.indexOf("windows 16-bit")!=-1)
+
+    // NOTE: Reliable detection of Win98 may not be possible. It appears that:
+    //       - On Nav 4.x and before you'll get plain "Windows" in userAgent.
+    //       - On Mercury client, the 32-bit version will return "Win98", but
+    //         the 16-bit version running on Win98 will still return "Win95".
+    this.win98 = ((agt.indexOf("win98")!=-1)||(agt.indexOf("windows 98")!=-1))
+    this.winnt = ((agt.indexOf("winnt")!=-1)||(agt.indexOf("windows nt")!=-1))
+    this.win32 = this.win95 || this.winnt || this.win98 || 
+                 ((this.major >= 4) && (navigator.platform == "Win32")) ||
+                 (agt.indexOf("win32")!=-1) || (agt.indexOf("32bit")!=-1)
+
+    this.os2   = (agt.indexOf("os/2")!=-1) 
+                 || (navigator.appVersion.indexOf("OS/2")!=-1)  
+                 || (agt.indexOf("ibm-webexplorer")!=-1)
+
+    this.mac    = (agt.indexOf("mac")!=-1)
+    this.mac68k = this.mac && ((agt.indexOf("68k")!=-1) || 
+                               (agt.indexOf("68000")!=-1))
+    this.macppc = this.mac && ((agt.indexOf("ppc")!=-1) || 
+                               (agt.indexOf("powerpc")!=-1))
+
+    this.sun   = (agt.indexOf("sunos")!=-1)
+    this.sun4  = (agt.indexOf("sunos 4")!=-1)
+    this.sun5  = (agt.indexOf("sunos 5")!=-1)
+    this.suni86= this.sun && (agt.indexOf("i86")!=-1)
+    this.irix  = (agt.indexOf("irix") !=-1)    // SGI
+    this.irix5 = (agt.indexOf("irix 5") !=-1)
+    this.irix6 = ((agt.indexOf("irix 6") !=-1) || (agt.indexOf("irix6") !=-1))
+    this.hpux  = (agt.indexOf("hp-ux")!=-1)
+    this.hpux9 = this.hpux && (agt.indexOf("09.")!=-1)
+    this.hpux10= this.hpux && (agt.indexOf("10.")!=-1)
+    this.aix   = (agt.indexOf("aix")  !=-1)      // IBM
+    this.aix1  = (agt.indexOf("aix 1")  !=-1)    
+    this.aix2  = (agt.indexOf("aix 2")  !=-1)    
+    this.aix3  = (agt.indexOf("aix 3")  !=-1)    
+    this.aix4  = (agt.indexOf("aix 4")  !=-1)    
+    this.linux = (agt.indexOf("inux")!=-1)
+    this.sco   = (agt.indexOf("sco")!=-1) || (agt.indexOf("unix_sv")!=-1)
+    this.unixware = (agt.indexOf("unix_system_v")!=-1) 
+    this.mpras    = (agt.indexOf("ncr")!=-1) 
+    this.reliant  = (agt.indexOf("reliantunix")!=-1)
+    this.dec   = (agt.indexOf("dec")!=-1) || (agt.indexOf("osf1")!=-1) 
+           || (agt.indexOf("dec_alpha")!=-1) || (agt.indexOf("alphaserver")!=-1) 
+           || (agt.indexOf("ultrix")!=-1) || (agt.indexOf("alphastation")!=-1) 
+    this.sinix = (agt.indexOf("sinix")!=-1)
+    this.freebsd = (agt.indexOf("freebsd")!=-1)
+    this.bsd = (agt.indexOf("bsd")!=-1)
+    this.unix  = (agt.indexOf("x11")!=-1) || this.sun || this.irix || this.hpux || 
+                 this.sco ||this.unixware || this.mpras || this.reliant || 
+                 this.dec || this.sinix || this.aix || this.linux || this.freebsd
+
+    this.vms   = (agt.indexOf("vax")!=-1) || (agt.indexOf("openvms")!=-1)
+}
+
+var is;
+var isIE3Mac = false;
+// this section is designed specifically for IE3 for the Mac 
+
+if ((navigator.appVersion.indexOf("Mac")!=-1) && (navigator.userAgent.indexOf("MSIE")!=-1) && (parseInt(navigator.appVersion)==3))
+       isIE3Mac = true;
+else 
+       is = new Is(); 
+
+strOpenParams = 'location=no,toolbar=no,status=yes,menubar=no,directories=no,scrollbars=yes,resizable=no';
+strOpenParamsSize = '';
+if(is.nav4up)
+{
+    strOpenParamsSize =
+        ',width='+screen.availWidth+',height='+screen.availHeight+',top='+screen.availTop+',left='+screen.availLeft;
+}
+else if(is.ie4up)
+    strOpenParamsSize = ',fullscreen=yes';
+
+function buildGETString()
+{
+   strGETString = 'LOGIN=TRUE' +
+       '&USERNAME=' +
+       escape(document.forms["LOGINFORM"].elements["USERNAME"].value) +
+       '&PASSWORD=' +
+       escape(document.forms["LOGINFORM"].elements["PASSWORD"].value) +
+       '&SERVER=' +
+       escape(document.forms["LOGINFORM"].elements["SERVER"].value) +
+       '&NOCACHE=' +
+       escape(document.forms["LOGINFORM"].elements["NOCACHE"].value);
+
+       // Change this if you have more radio buttons for 
+       // interface options.
+       for(var i=0; i < 3; i++)
+       {
+           if(document.forms["LOGINFORM"].elements["INTERFACE"][i].checked)
+	   {
+	       strGETString = strGETString +	   
+	           '&INTERFACE=' +
+               escape(
+               document.forms["LOGINFORM"].elements["INTERFACE"][i].value);
+           }
+       }
+
+   return(strGETString);
+}
+
+// MailMan(HTMLCOMMENTEND)
+</script>
+EndSnippet(KIOSKMODESCRIPT) -->
+</head>
+
+<body bgcolor="#ffffff" background="i_bk.gif" link="#009999" vlink="#006666"
+alink="#00CCCC" topmargin="10" leftmargin="10" marginwidth="10" marginheight="10">
+
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td align="center" valign="top">
+<a href="http://www.endymion.com/products/mailman">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td><img src="i_logo.gif" border="0" alt="Endymion Logo" WIDTH="100" HEIGHT="128"></td></tr>
+<!-- MMPRO
+<tr><td><img src="i_pro.gif" border="0" alt="Endymion Logo" WIDTH="100" HEIGHT="33"></td></tr>
+MMPRO -->
+<!-- MMSTD
+<tr><td><img src="i_se.gif" border="0" alt="Endymion Logo" WIDTH="100" HEIGHT="33"></td></tr>
+MMSTD -->
+</table>
+</a><br>
+    </td>
+    <td width="25"><img src="i_clear.gif" alt=" " hspace="12" WIDTH="1" HEIGHT="1"></td>
+    <td width="100%"><h1 align="center"><img src="i_endymion.gif" alt="MailMan" width="328" height="102"></h1>
+    <p><font face="Arial, Helvetica">MailMan(GREETING)</font> <!--webbot bot="HTMLMarkup"
+    startspan -->
+<!-- This greeting snippet is provided to the user when they first
+     visit the login page or when they log out. -->
+<!-- MailManSnippet(GREETING)
+<center>
+<table cellspacing="0" cellpadding="0" width="80%" border="0">
+<tr>
+<td align="right" valign="top"><img src="i_cap_w.gif" hspace="0" width="24" height="36" border="0" align="bottom" alt="W"></td>
+<td align="left" valign="top"><img src="i_clear.gif" width="1" height="1" vspace="16" hspace="0" border="0" align="bottom" alt=" "><font face="Arial, Helvetica">elcome to Endymion MailMan MailMan(EDITION) MailMan(VERSION).  For more information about what
+    Endymion MailMan is and what it does, please refer to the <a
+    href="http://www.endymion.com/products/mailman/">MailMan page</a> at <a
+    href="http://www.endymion.com/">Endymion Corporation</a>. To check your mail now, log in here: </font></td></tr></table></center>
+EndSnippet(GREETING) -->
+<!--webbot bot="HTMLMarkup" endspan --> </p>
+    <form method="POST" action="MailMan(ME)" name="LOGINFORM">
+      <input type="hidden" name="UNIQUE" value="MailMan(UNIQUE)"><input type="hidden"
+      name="LOGIN" value="Log In"><div align="center"><p><center><table border="0">
+        <tr>
+          <td><font face="Arial, Helvetica"><b>Username:</b></font></td>
+          <td><font face="Arial, Helvetica"><input type="text" name="USERNAME" size="30" value=""></font></td>
+        </tr>
+        <tr>
+          <td><font face="Arial, Helvetica"><b>Password:</b></font></td>
+          <td><font face="Arial, Helvetica"><input type="password" name="PASSWORD" size="30" value=""> </font></td>
+        </tr>
+        <tr>
+          <td><font face="Arial, Helvetica"><b>Server:</b></font></td>
+          <td><font face="Arial, Helvetica"><input type="text" name="SERVER" size="30" value=""></font></td>
+        </tr>
+      </table>
+      </center></p></div><table cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+	  <table cellspacing="4" cellpadding="0" border="0">
+        <tr>
+          <td colspan="2" bgcolor="#000000" width="100%"><img src="i_clear.gif" alt=" " width="1" height="1" border="0"></td>
+        </tr>
+            <tr>
+              <td valign="middle">
+	      <table cellspacing="0" cellpadding="0" border="0">
+	      <tr>
+	      <td><img src="i_frames.gif" width="31" height="41" border="0" alt="Frames interface"></td>
+	      <td><font face="Arial, Helvetica"><input type="radio" name="INTERFACE" value="FRAMES=TRUE" checked></font></td>
+	      </tr>
+	      </table>
+	      </td>
+              <td valign="middle" align="left"><font face="Arial, Helvetica" size="2"><b>Use an interface that is split into panes.</b></font><br>
+<font face="Arial, Helvetica" size="2">This interface is more user friendly and attractive, but requires a web browser that supports 'frames' and 'cookies'.</font></td>
+            </tr>
+            <tr>
+              <td valign="middle">
+	      <table cellspacing="0" cellpadding="0" border="0">
+	      <tr>
+	      <td><img src="i_noframes.gif" width="31" height="41" border="0" alt="No frames interface"></td>
+	      <td><font face="Arial, Helvetica"><input type="radio" name="INTERFACE" value="NOFRAMES=TRUE"></font></td>
+	      </tr>
+	      </table>
+	      </td>
+              <td valign="middle" align="left"><font face="Arial, Helvetica" size="2"><b>Use a single-pane interface.</b></font><br>
+<font face="Arial, Helvetica" size="2">For old or 'thin' web browsers.  More cumbersome to use.</font></td>
+            </tr>
+	    <!-- This row is intended to be an example of how to instruct MailMan to use an alternate template set, including telling it to do noframes for that template set. -->
+            <tr>
+              <td valign="middle">
+	      <table cellspacing="0" cellpadding="0" border="0">
+	      <tr>
+	      <td><img src="i_text.gif" width="31" height="41" border="0" alt="Text-only interface"></td>
+	      <td><font face="Arial, Helvetica"><input type="radio" name="INTERFACE" value="ALTERNATE_TEMPLATES=t_alt_&NOFRAMES=TRUE"></font></td>
+	      </tr>
+	      </table>
+	      </td>
+              <td valign="middle" align="left"><font face="Arial, Helvetica" size="2"><b>Use a totally text-based interface.</b></font><br>
+<font face="Arial, Helvetica" size="2">
+Designed for very old or very 'thin' web browsers, or for extremely slow network connections.  Very ugly, but very practical.  Designed to work anywhere.
+</font></td>
+            </tr>
+        <tr><td colspan="2" bgcolor="#000000" width="100%"><img src="i_clear.gif" alt=" " width="1" height="1" border="0"></td></tr>
+            <tr>
+              <td valign="middle" align="right"><font face="Arial, Helvetica"><input type="checkbox" name="NOCACHE"
+              value="ON"></font></td>
+              <td valign="top" align="left"><font face="Arial, Helvetica" size="2"><b>Don't cache output.</b></font><br>
+<font face="Arial, Helvetica" size="2">Check here to set MailMan to mark all output pages as expired so that they will not be cached, for increased security and privacy.  (Some web browsers may not honor page expiration directives.)</font></td>
+            </tr>
+        <tr><td colspan="2" bgcolor="#000000" width="100%"><img src="i_clear.gif" alt=" " width="1" height="1" border="0"></td></tr>
+          </table>
+          </td>
+        </tr>
+      </table>
+      <center><p><font face="Arial, Helvetica">
+<!-- NOKIOSKMODE
+<input type="image" src="i_b_login.gif" border="0" name="LOGIN" alt="Log In" value="TRUE" WIDTH="104" HEIGHT="31">
+NOKIOSKMODE -->
+<!-- KIOSKMODE
+<a href="MailMan(ME)?START=TRUE" onClick="window.open('MailMan(ME)?'+buildGETString(),'MailMan',strOpenParams+strOpenParamsSize);">
+<img src="i_b_login.gif" border="0" name="LOGIN" alt="Log In" value="TRUE" WIDTH="104" HEIGHT="31"></a>
+KIOSKMODE -->
+<a href="MailMan(ME)?HELP=TRUE" target="newwindow"><img src="i_b_helpreverse.gif" border="0" alt="Help" WIDTH="104" HEIGHT="31"></a>
+      </font></p>
+    <p align="center"><font face="Arial, Helvetica" size="1"><a
+    href="http://www.endymion.com/products/mailman">MailMan</a> Script Copyright &copy; 1997 - 1999
+    <a href="http://www.endymion.com">Endymion Corporation</a><br>
+    Interface Copyright &copy; 1997 - 1999
+    <a href="http://www.endymion.com">Endymion Corporation</a> and
+    <a href="http://www.hypnopaedia.com">Hypnopaedia Studios</a>.<br>
+    Microcompanies With Attitude</font><br>
+    <a href="http://www.endymion.com"><img src="i_tinylogo.gif" alt="(e)" WIDTH="30" HEIGHT="30" border="0"></a></p>
+      </center>
+    </form>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+
+
+
+
+

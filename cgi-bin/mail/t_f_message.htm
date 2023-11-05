@@ -1,0 +1,111 @@
+<html>
+
+<head>
+<title>MailMan: &quot;MailMan(SUBJECT)&quot;</title>
+</head>
+
+<body bgcolor="#ffffff" link="#006666" vlink="#003333" alink="#006666" topmargin="3" leftmargin="3">
+
+<table width="100%">
+  <tr>
+    <td align="center">
+    <table cellpadding="0" cellspacing="2">
+      <tr>
+        <td><a target="_top" href="MailMan(ME)?REPLY:MailMan(ID)=TRUE"><img src="i_b_reply.gif"
+        width="100" height="23" alt="Reply" border="0"></a></td>
+        <td><a target="_top" href="MailMan(ME)?REPLYALL:MailMan(ID)=TRUE"><img src="i_b_replyall.gif"
+        width="100" height="23" alt="Reply All" border="0"></a></td>
+        <td><a target="_top" href="MailMan(ME)?FORWARD:MailMan(ID)=TRUE"><img src="i_b_forward.gif"
+        width="100" height="23" alt="Forward" border="0"></a></td>
+      </tr>
+    </table>
+    <table cellpadding="0" cellspacing="2">
+      <tr>
+        <td><a href="MailMan(ME)?DELETE:MailMan(ID)=TRUE" target="_top"><img src="i_b_delete.gif"
+        width="100" height="23" alt="Delete Message" border="0"></a></td>
+	<td>
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+          <td><a href="MailMan(ME)?PREV:MailMan(ID)=TRUE"><img src="i_b_prev.gif"
+          width="60" height="23" alt="Previous Message" border="0"></a></td>
+          <td><a href="MailMan(ME)?NEXT:MailMan(ID)=TRUE"><img src="i_b_next.gif"
+          width="61" height="23" alt="Next Message" border="0"></a></td>
+	</tr>
+	</table>
+	</td>
+        <td><a href="MailMan(ME)?SOURCE:MailMan(ID)=TRUE"><img src="i_b_source.gif"
+        width="100" height="23" alt="Message Source" border="0"></a></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+  <!-- Only used in MailMan Professional Edition. -->
+  <!-- MMPRO
+  <tr>
+  <td colspan="2">
+  <form target="_top" action="MailMan(ME)" method="POST">
+  <center>
+      <table>
+      <tr>
+      <td align="right" valign="middle">
+      <td align="right" valign="middle"><font face="Arial, Helvetica" size="2">Move this message to:</font></td>
+      <td align="right" valign="middle"><select name="FOLDERTRANSFERLIST">MailMan(FOLDERLIST)</select></td>
+      <td align="right" valign="middle"><input type="image" src="i_b_transfer.gif" width="100" height="23" border="0" name="MOVE:MailMan(ID)" value="TRUE"></td></tr>
+      </table></center></form></td></tr>
+      MMPRO -->
+  <tr>
+    <td width="100%" valign="top" align="left"><table cellpadding="0" cellspacing="1"
+    width="100%">
+      <tr>
+        <td colspan="2" bgcolor="#000000" width="100%"><img src="i_clear.gif" width="1" height="1"
+        border="0" alt=" "></td>
+      </tr>
+      <tr>
+        <td bgcolor="#339999" colspan="2"><font face="Arial, Helvetica" size="2"><b>Message MailMan(MESSAGENUM) of MailMan(NUM)</b></font></td>
+      </tr>
+      <tr>
+        <td bgcolor="#339999"><font face="Arial, Helvetica" size="2"><b>From:</b></font></td>
+        <td><font face="Arial, Helvetica" size="2">MailMan(FROM)</font></td>
+      </tr>
+      <tr>
+        <td bgcolor="#339999"><font face="Arial, Helvetica" size="2"><b>To:</b></font></td>
+        <td><font face="Arial, Helvetica" size="2">MailMan(TO)</font><!-- MailManSnippet(CCLINE)</td></tr><tr><td bgcolor="#339999"><font face="Arial, Helvetica" size="2"><b>CC:</b></font></td><td><font face="Arial, Helvetica" size="2">MailMan(CC)</font></td>EndSnippet(CCLINE) --> <font face="Arial, Helvetica">MailMan(CCLINE)</font></td>
+      </tr>
+      <tr>
+        <td bgcolor="#339999"><font face="Arial, Helvetica" size="2"><b>Date:</b></font></td>
+        <td><font face="Arial, Helvetica" size="2">MailMan(DATE)</font></td>
+      </tr>
+      <tr>
+        <td bgcolor="#339999"><font face="Arial, Helvetica" size="2"><b>Subject:</b></font></td>
+        <td><font face="Arial, Helvetica" size="2">MailMan(SUBJECT)</font></td>
+      </tr>
+      <tr>
+        <td colspan="2" bgcolor="#000000" width="100%"><img src="i_clear.gif" width="1" height="1"
+        border="0" alt=" "></td>
+      </tr>
+      <tr>
+        <td colspan="2"><font size="3"><br>
+        MailMan(MESSAGE) </font><img src="i_clear.gif" width="1" height="1" vspace="2" border="0"></td>
+      </tr>
+      <tr>
+        <td colspan="2" bgcolor="#000000" width="100%"><img src="i_clear.gif" width="1" height="1"
+        border="0"></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+    <p align="center"><font face="Arial, Helvetica" size="1"><a
+    target="_top" href="MailMan(ME)?BACKGROUND=http://www.endymion.com/products/mailman">MailMan</a> Script Copyright &copy; 1997 - 1999
+    <a target="_top" href="MailMan(ME)?BACKGROUND=http://www.endymion.com">Endymion Corporation</a><br>
+    Interface Copyright &copy; 1997 - 1999
+    <a target="_top" href="MailMan(ME)?BACKGROUND=http://www.endymion.com">Endymion Corporation</a> and
+    <a target="_top" href="MailMan(ME)?BACKGROUND=http://www.hypnopaedia.com">Hypnopaedia Studios</a>.<br>
+    Microcompanies With Attitude</font><br>
+    <a target="_top" href="MailMan(ME)?BACKGROUND=http://www.endymion.com"><img src="i_tinylogo.gif" alt="(e)" WIDTH="30" HEIGHT="30" border="0"></a></p>
+    </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

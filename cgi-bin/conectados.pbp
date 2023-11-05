@@ -1,0 +1,18 @@
+[Settings]
+script=C:\FrontPage Webs\Content\cgi-bin\conectados.pl
+args=
+pathinfo=
+exec_dir=C:\FrontPage Webs\Content\cgi-bin
+itype=0
+
+[Wizard]
+form=
+errout=
+dout=
+rout=
+parse=0
+out=0
+
+[Modules]
+0=C:\FrontPage Webs\Content\cgi-bin\busanick.pl
+

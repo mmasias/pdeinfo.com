@@ -1,0 +1,143 @@
+# WebCal Data File
+# Major U.S. Holidays & Observances (1995-2005)
+00000101|New Year's Day|
+00000214|Valentine's Day|
+00000317|St. Patrick's Day|
+00000401|April Fool's Day|
+00000415|Income Taxes Due|
+00000704|Independence Day|
+00001031|Halloween|
+00001111|Veterans Day|
+00001225|Christmas Day|
+19950116|Martin Luther King Jr. Day|
+19950220|Presidents' Day|
+19950301|Ash Wednesday|
+19950409|Palm Sunday|
+19950416|Easter Sunday|
+19950514|Mothers' Day|
+19950529|Memorial Day|
+19950618|Fathers' Day|
+19950904|Labor Day|
+19951009|Columbus Day|
+19951107|Election Day|
+19951123|Thanksgiving Day|
+19960115|Martin Luther King Jr. Day|
+19960219|Presidents' Day|
+19960221|Ash Wednesday|
+19960331|Palm Sunday|
+19960407|Easter Sunday|
+19960512|Mothers' Day|
+19960527|Memorial Day|
+19960616|Fathers' Day|
+19960902|Labor Day|
+19961014|Columbus Day|
+19961105|Election Day|
+19961128|Thanksgiving Day|
+19970120|Martin Luther King Jr. Day|
+19970212|Ash Wednesday|
+19970217|Presidents' Day|
+19970323|Palm Sunday|
+19970330|Easter Sunday|
+19970511|Mothers' Day|
+19970526|Memorial Day|
+19970615|Fathers' Day|
+19970901|Labor Day|
+19971013|Columbus Day|
+19971104|Election Day|
+19971127|Thanksgiving Day|
+19980119|Martin Luther King Jr. Day|
+19980216|Presidents' Day|
+19980225|Ash Wednesday|
+19980405|Palm Sunday|
+19980412|Easter Sunday|
+19980510|Mothers' Day|
+19980525|Memorial Day|
+19980621|Fathers' Day|
+19980907|Labor Day|
+19981012|Columbus Day|
+19981103|Election Day|
+19981126|Thanksgiving Day|
+19990118|Martin Luther King Jr. Day|
+19990215|Presidents' Day|
+19990217|Ash Wednesday|
+19990328|Palm Sunday|
+19990404|Easter Sunday|
+19990509|Mothers' Day|
+19990531|Memorial Day|
+19990620|Fathers' Day|
+19990906|Labor Day|
+19991011|Columbus Day|
+19991102|Election Day|
+19991125|Thanksgiving Day|
+20000117|Martin Luther King Jr. Day|
+20000221|Presidents' Day|
+20000308|Ash Wednesday|
+20000416|Palm Sunday|
+20000423|Easter Sunday|
+20000514|Mothers' Day|
+20000529|Memorial Day|
+20000618|Fathers' Day|
+20000904|Labor Day|
+20001009|Columbus Day|
+20001107|Election Day|
+20001123|Thanksgiving Day|
+20010115|Martin Luther King Jr. Day|
+20010219|Presidents' Day|
+20010228|Ash Wednesday|
+20010408|Palm Sunday|
+20010415|Easter Sunday|
+20010513|Mothers' Day|
+20010528|Memorial Day|
+20010617|Fathers' Day|
+20010903|Labor Day|
+20011008|Columbus Day|
+20011106|Election Day|
+20011122|Thanksgiving Day|
+20020121|Martin Luther King Jr. Day|
+20020213|Ash Wednesday|
+20020218|Presidents' Day|
+20020324|Palm Sunday|
+20020331|Easter Sunday|
+20020512|Mothers' Day|
+20020527|Memorial Day|
+20020616|Fathers' Day|
+20020902|Labor Day|
+20021014|Columbus Day|
+20021105|Election Day|
+20021128|Thanksgiving Day|
+20030120|Martin Luther King Jr. Day|
+20030217|Presidents' Day|
+20030305|Ash Wednesday|
+20030413|Palm Sunday|
+20030420|Easter Sunday|
+20030511|Mothers' Day|
+20030526|Memorial Day|
+20030615|Fathers' Day|
+20030901|Labor Day|
+20031013|Columbus Day|
+20031104|Election Day|
+20031127|Thanksgiving Day|
+20040119|Martin Luther King Jr. Day|
+20040216|Presidents' Day|
+20040225|Ash Wednesday|
+20040404|Palm Sunday|
+20040411|Easter Sunday|
+20040509|Mothers' Day|
+20040531|Memorial Day|
+20040620|Fathers' Day|
+20040906|Labor Day|
+20041011|Columbus Day|
+20041102|Election Day|
+20041125|Thanksgiving Day|
+20050117|Martin Luther King Jr. Day|
+20050209|Ash Wednesday|
+20050221|Presidents' Day|
+20050320|Palm Sunday|
+20050327|Easter Sunday|
+20050508|Mothers' Day|
+20050530|Memorial Day|
+20050619|Fathers' Day|
+20050905|Labor Day|
+20051010|Columbus Day|
+20051108|Election Day|
+20051124|Thanksgiving Day|

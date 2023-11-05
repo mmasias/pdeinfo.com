@@ -1,0 +1,14 @@
+[Settings]
+script=C:\FrontPage Webs\Content\cgi-bin\calendario\calendar.setup.cgi
+args=
+pathinfo=
+exec_dir=
+itype=0
+
+[Wizard]
+form=
+errout=
+dout=
+rout=
+parse=0
+out=0

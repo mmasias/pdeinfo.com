@@ -1,0 +1,249 @@
+                             DOCUMENTATION
+
+         WebCal 1.21 by Darryl C. Burgdorf (burgdorf@awsd.com)
+
+                    http://awsd.com/scripts/webcal/
+
+              ===========================================
+
+WebCal allows you to create and maintain an interactive events
+calendar or scheduling system on your Web site.  The script can create
+calendars for any desired month from 1601 to 2899 A.D.; events to be
+displayed are stored in an easily-maintained data file.  The data file
+can include singular, weekly, monthly and annual events, and those
+events can be linked to outside URLs for additional information.
+Calendars can be viewed in several different table grid formats or
+as simple text listings.
+
+WebCal is shareware.  If you use it, please register it!  The
+registration fee is only $25 (US).  Payment should be sent via check
+or money order to Darryl C. Burgdorf, Affordable Web Space Design,
+3524 Pacific Street, Omaha NE 68105.
+
+              ===========================================
+
+The files that you need are as follows:
+
+webcal.pl:  The script which allows users to view your calendars.
+
+webcal.add.pl:  The script which allows you to add new events to your
+  calendar database.
+
+webcal.delete.pl:  The script which allows you to delete entries from
+  your calendar database.  (The two admin functions are contained in
+  separate scripts so that you may, if you like, easily allow users to
+  add events to your calendar without also allowing them access to the
+  delete functions.)
+
+webcal.config.pl:  The file containing the configuration variables used
+  by all of the above scripts.
+
+data.astro.txt, data.holiday.txt and data.jewish.txt:  Example calendar
+  databases, listing astronomical events (equinoxes, solstices, etc.),
+  major US holidays and celebrations, and major Jewish holidays and
+  celebrations, for the years 1995 through 2005.
+
+              ===========================================
+
+SETTING UP WEBCAL:
+
+Setting up WebCal is quite easy.  Make sure that the first line of each
+of the scripts points correctly to the location of Perl on your system,
+that they are all set world-executable ("chmod a+x <scriptname>"), and
+that the "require" line near the top of each one points correctly to
+your configuration file.  (You may want to put the admin scripts in a
+password-protected directory.)  Make sure, as well, that your data file
+is set world-writable ("chmod a+w <filename").
+
+The variables in the configuration file are as follows:
+
+$cgiurl:  The URL of the main calendar display script.
+$addcgiurl:  The URL of the "add" script.
+$deletecgiurl:  The URL of the "delete" script.
+
+@datafiles:  The absolute paths -- not the URLs -- of your events data
+  files.  You can have as many as you like, so you could, for example,
+  have one or more (such as those provided with the script) to store
+  "static" holiday info, another to store "official" events, and yet
+  another to store events entered by your visitors.  You could even set
+  up distinct calendars, if you wished, to display varying subsets of
+  the list of data files.
+  
+%editfiles:  Define this variable with a list of the names and paths
+  of those files which you want to make accessible to those using the
+  add and delete scripts.
+
+$DataDirPath and $DataDirURL:  These variables are optional, and should
+  point to the absolute path and URL, respectively, of a world-writable
+  data directory in which the script can put information pages about
+  events added to the database.  If you leave these variables undefined,
+  the event entry form will allow only a short description and URL, and
+  the script won't create any new pages.  As well, if the directory
+  you've specified doesn't exist or if the script is unable to write
+  to it, no option for the creation of information pages will be
+  available.
+
+$DataDir_header and $DataDir_footer:  The full paths to optional text
+  files containing HTML code to be placed at the top and bottom of the
+  "information" pages.
+
+$bodyspec:  Any attributes (BACKGROUND, BGCOLOR, TEXT, etc.) which
+  should be assigned to the <BODY> tag on admin pages.
+
+$header_file and $footer_file:  The full paths to optional text files
+  containing HTML code to be placed at the top and bottom of calendar
+  and/or admin pages.  This allows you to include certain "standard"
+  information on all of those pages.
+
+$CalendarTitle:  An (optional) title to be used on your calendar pages.
+
+$DisplayCounter:  If this variable is set to 1, the full-size table
+  version of the calendar will display on each date a "counter" of the
+  number of days gone in the year and the number yet to go (e.g.,
+  "364/1").  If you prefer that the counter not be displayed, simply
+  leave this variable undefined.
+
+$DisplayPhases:  WebCal can, if you wish, calculate and display lunar
+  phases on your calendar pages.  If you prefer that it not do so, just
+  leave this variable undefined.
+  
+$DefaultType:  This variable sets the "default" calendar style for your
+  displays.  It can be set to either "Table", "Small Table" or "Text".
+
+$SmallTableText:  If you set this variable to 1, small table displays
+  will be accompanied by a textual listing of the events for that month.
+  If you set it to 0, no such listing will be included.  This can be
+  handy if, for example, you're displaying timeshare availability.
+  While you'd want visitors to know whether certain dates were already
+  booked, you wouldn't necessarily want them to know *who* booked them.
+
+$PreviousLastOnly:  If this variable is set to 1, visitors will *only*
+  have the option to move back or forward one month at a time.  They
+  won't be able to select specific months, and they won't be able to
+  alter the calendar style.
+
+$AllowUserChoice:  If this variable is set to 1, visitors won't be able
+  alter the calendar style, but *will* still have the option to select
+  specific months (unless, of course, $PreviousLastOnly is also set).
+
+$AllowHTML:  If this variable is set to 1, HTML code is allowed in
+  calendar entries.  If it is set to 0, HTML code is stripped.
+
+$AllowMultiDate:  If this variable is set to 1, it will be possible to
+  enter events not only for specific dates, but also for date ranges.
+
+$bgcolor_normal:  The color (defined with standard HTML RGB hex code) to
+  be used as the background for "normal" dates (dates with no events) on
+  the graphic calendar.
+
+$bgcolor_header:  The color to be used as the background for the header
+  (month line) at the top of the calendar.
+
+$bgcolor_special:  The color to be used as the background for dates on
+  which an event occurs.
+
+$textcolor_normal:  The text color to be used for for "normal" dates on
+  the calendar.
+
+$textcolor_header:  The text color to be used for the header.
+
+$textcolor_today:  The text color to be used for today's date on the
+  calendar.
+
+$textcolor_special:  The text color to be used for event listings.
+
+$TableFont:  The "FACE" specification (if any) that you want used in
+  your calendar tables.  If you've defined a font style for the page
+  as a whole, and want it used in the calendar tables, as well, define
+  it here, as otherwise, Netscape Navigator will use a visitor's default
+  font within the tables, no matter what's used on the rest of the page.
+  You can also use this, of course, to deliberately define a font for
+  the tables different from the one you've used on the rest of the page.
+
+$HourOffset:  If you are in one time zone and your Web host is in
+  another, you can use this variable to make sure that your calendar
+  always shows the correct date for your location.  For example, if your
+  server is located in the Eastern time zone, but you're in the Pacific
+  time zone, set it to "-3".
+
+$MonSunWeek:  If set to 1, calendar weeks will run from Monday to Sunday
+  rather than from Sunday to Monday.  (This can be handy if you list a
+  lot of Saturday/Sunday events and want the weekend days to be more
+  clearly "linked" visually.)
+
+              ===========================================
+
+USING WEBCAL:
+
+You (or, if you desire, your visitors) can add events to the database
+simply by calling the webcal.add.pl script.  You'll be presented with an
+input form; just input the date(s) on which the event will (or did)
+occur, a brief description of the event, and, optionally, a URL address
+to which that description should link.  If you wish the event to show up
+on a certain date *every* year, simply define the year as "x".  This is
+handy, for example, for inputting holidays which fall on the same date
+each year.  (If you input a year as only one or two digits, the script
+will assume that it falls between 1950 and 2049.  For example, 98 will
+be automatically converted to 1998, and 1 will be automatically
+converted to 2001.)
+
+You can delete events from the database by calling the webcal.delete.pl
+script.  You'll be presented with a chronological list of *every* event
+in the database.  Simply checkmark the event(s) you wish to delete, and
+click on the "delete" button.
+
+To view calendars, just call the main webcal.pl script.  When you first
+visit, you'll see a tabular (grid) calendar of the current month, unless
+of course another view has been defined as the default.  From that screen,
+you can select any month you desire, and/or, if permitted, change the
+display style.
+
+              ===========================================
+
+ABOUT THE PERPETUAL CALENDAR SUBROUTINE:
+
+The perpetual calendar routine I wrote for WebCal provides accurate
+day/date correspondences for dates from 1601 to 2899 A.D.  It is based
+on the Gregorian calendar, so be aware that early correspondences may
+not always be historically accurate.  The Gregorian calendar was adopted
+by the Italian states, Portugal and Spain in 1582, and by the Catholic
+German states in 1583.  However, it was not adopted by the Protestant
+German states until 1699, by England and its colonies until 1752, by
+Sweden until 1753, by Japan until 1873, by China until 1912, by the
+Soviet Union until 1918, and by Greece until 1923.
+
+              ===========================================
+
+REGISTERING WEBCAL:
+
+WebCal is shareware.  If you use it, please register it!  The
+registration fee is only $25 (US).  Payment should be sent via check or
+money order to Darryl C. Burgdorf, Affordable Web Space Design, 3524
+Pacific Street, Omaha NE 68105.
+
+(If you happen to live in a country other than the United States, you
+can write a check in your local currency for the equivalent of $32.50.
+That will cover the $25 registration fee and the $7.50 service fee which
+my bank charges.  Please do *not* write me a check in US funds drawn on
+a non-US bank; the service charge for those can be anywhere from $10 to
+$25!)
+
+The unregistered version of the script is not crippled in any way.  I'm
+not trying to "coerce" anyone into sending me money.  But I don't think
+it's an unreasonable request.  I believe WebCal is a commercial-
+quality product; a *lot* of work has gone into its creation.  If you
+use it and make money with it, I'd appreciate it if you would be kind
+enough to send in the registration fee.  I'll be that much more likely
+to be able to continue spending time and effort on the scripts in the
+WebScripts collection, and you'll have the satisfaction of knowing you
+did the right thing.  ;)
+
+              ===========================================
+
+This documentation assumes that you have at least a general familiarity
+with setting up Perl scripts.  If you need more specific assistance,
+check with your system administrators, consult the WebScripts FAQs
+(frequently-asked questions) file <http://awsd.com/scripts/faqs.shtml>,
+or ask on the WebScripts Forum <http://awsd.com/scripts/forum/>.
+
+-- Darryl C. Burgdorf

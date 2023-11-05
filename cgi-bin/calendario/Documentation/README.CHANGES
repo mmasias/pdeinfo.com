@@ -1,0 +1,70 @@
+08-01-96
+
+	Created the README.CHANGES and README.INSTALLATION files
+	Replaced all usages of "here document printing with qq! method.
+		To many people were having trouble because when they
+		transferred the files using binary mode, invisible
+		characters would get stuck in the script and screw up the
+		here formatting.  qq! is used to change the print
+		delineator from double quotes (") to bang (!).  We do this
+		so that double quotes within the print string will not
+		need to be escaped.
+        Added informative error messages to the open commands
+
+April 01, 1998
+
+	Fixed a problem with the modify item s/\|/~~/ was commented out because it
+ 		causes sorting problems
+	Fixed the year to 1998 in the setup file
+	Implemented new security precautions like an index.html in each
+		directory and a move from .setup to .setup.cgi
+	Created Documentation directory
+	Fixed a hard coded date at line 323
+        Fixed admin bug.  You can now have an administrator by changing their group to
+        "admin" ion the calendar.users file.  This special keyword allows the user
+        to modify or delete anyone else's entry.
+
+April 04, 1998
+
+	Added -T taint checking to the header of the cgi script.  
+	    	For example, 
+
+		#!/usr/local/bin/perl
+
+		becomes
+
+		#!/usr/local/bin/perl -T
+
+		Perl 4 Note: Perl 4 does not support the -T parameter. 
+		Instead, use #!/usr/local/bin/taintperl
+
+		Taint checking basically forces the programs to validate 
+		all input that is going to have any effect on files or 
+		system calls. 
+
+		In addition, library calls need to be explicitly named. 
+		So ./ is prefixed in front of required libraries in the 
+		current subdirectory.
+
+	Made modifications to the main script to support taint 
+		checking.
+
+		Anytime a filename results from input from a user such as 
+		form input, this input needs to be validated in order to 
+		be considered safe by the taint checking perl script.
+
+		Thus, changes have been made to validate the data using 
+		techniques described in the perl documentation and the 
+		WWW security FAQ located at http://www.w3.org/Security/Faq/ 
+		by Lincoln Stein
+
+		Note though that when taint mode is on, paths need to 
+		become more specific. For example, the library require 
+		statements use "./" to indicate explicitly that we are 
+		grabbing the library from the current directory and not 
+		just in the @INC include path.
+
+November 17, 1998
+                
+                Fixed chop problem with session email.  Changed it to
+                        chomp  

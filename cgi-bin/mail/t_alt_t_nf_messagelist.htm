@@ -1,0 +1,198 @@
+<html>
+
+<head>
+<title>MailMan message list for MailMan(USERNAME)@MailMan(SERVER)</title>
+</head>
+
+<body bgcolor="#ffffff" link="#009999" vlink="#009999"
+alink="#009999" topmargin="10" leftmargin="10" marginheight="10" marginwidth="10">
+
+<form method="post" action="MailMan(ME)">
+  <input type="hidden" name="UNIQUE" value="MailMan(UNIQUE)"><table cellspacing="0" cellpadding="0" width="100%">
+    <tr>
+      <td valign="top" align="left" bgcolor="#339999"><table cellspacing="0" cellpadding="2" border="0">
+      <tr><td align="center">
+      <table cellspacing="0" cellpadding="0" border="0">
+<tr><td align="center">
+<font face="Arial, Helvetica" size="2"><b>Endymion MailMan</b></font></td></tr>
+<!-- MMPRO
+<tr><td align="center">
+<font face="Arial, Helvetica" size="1">Professional Edition</font></td></tr>
+MMPRO -->
+<!-- MMSTD
+<tr><td align="center">
+<font face="Arial, Helvetica" size="1">Standard Edition</font></td></tr>
+MMSTD -->
+</table></td></tr>
+      <!-- MMSTD
+      <tr><td align="center"><br><br><input type="submit" name="LIST" value="Reload"></td></tr>
+      MMSTD -->
+      <!-- MMPRO
+      <tr><td align="center"><br><br><input type="submit" name="FOLDERCHANGE#INBOX" value="Reload"></td></tr>
+      MMPRO -->
+            <tr>
+              <td align="center"><input name="LOGOUT" value="Log Out" type="submit"></td>
+            </tr>
+            <tr>
+              <td align="center"><input name="NEW" value="Compose" type="submit"></td>
+            </tr>
+      <!-- Only appears in MailMan Professional Edition. -->
+      <!-- MMPRO
+      <tr>
+        <td align="center"><input name="FOLDERS" value="Folders" type="submit"></a></td>
+      </tr>
+      <tr>
+        <td align="center"><input name="ADDRESSES"
+        value="Addresses" type="submit"></a></td>
+      </tr>      
+      <tr>
+        <td align="center"><input name="PREFERENCES"
+        value="Preferences" type="submit"></a></td>
+      </tr>      
+      <tr>
+        <td align="center"><input name="ACCOUNTS"
+        value="Accounts" type="submit"></a></td>
+      </tr>      
+      MMPRO -->
+      <tr>
+        <td align="center"><input name="HELP" value="Help" type="submit"></td>
+      </tr>
+            <tr>
+	    <td><font size="1">MailMan(AUTHENTICATION)
+	    MailMan(SETTINGS) </font></td>
+            </tr>
+      </table>
+      </td>
+      <td width="21"><img src="i_clear.gif" width="1" height="1" hspace="10" alt=" "></td>
+      <td width="100%" valign="top" align="left">
+<center><font
+      face="Arial, Helvetica" size="3"><b>MailMan(USERNAME)@MailMan(SERVER)</b></font><br>
+      <!-- Only appears in MailMan Professional Edition. -->
+      <!-- MMPRO
+      <table>
+      <tr>
+      <td align="left" valign="middle"><font face="Arial, Helvetica" size="2">
+Change to folder:</font></td>
+      <td align="left" valign="middle"><font face="Arial, Helvetica" size="2">
+<select name="FOLDERCHANGELIST">MailMan(FOLDERLIST)</select></font></td>
+      <td align="left" valign="middle"><input type="submit" name="FOLDERCHANGE#MAILMANSPECIALTRUE" value="Change"></td>
+      </tr></table>
+      MMPRO -->
+<!-- MailManSnippet(QUOTA_STATUS)
+<font face="Arial, Helvetica" size="2">You are currently using
+MailMan(QUOTA_USAGE_PERCENT)% of your MailMan(QUOTA_LIMIT_MB)
+megabytes of storage space.</font><br>
+EndSnippet(QUOTA_STATUS) -->
+<!-- MailManSnippet(QUOTA_ERROR)
+<font face="Arial, Helvetica" size="2">
+<i><b>No more messages can currently be downloaded.</b></i></font><br>
+EndSnippet(QUOTA_ERROR) -->
+      <!-- MMPRO MailMan(QUOTA_STATUS) MMPRO -->
+      <!-- Only appears in MailMan Standard Edition. -->
+      <!-- MMSTD
+      <font face="Arial, Helvetica" size="2">This account has MailMan(NUM) messages:</font><br>
+      MMSTD -->
+      <!-- Only appears in MailMan Professional Edition. -->
+      <!-- MMPRO
+      <font face="Arial, Helvetica" size="2">The folder <b>MailMan(CURRENTFOLDER)</b> has MailMan(NUM) messages:<br>
+      MMPRO -->
+      </center>
+<center><font face="Arial, Helvetica" size="2">MailMan(PAGELINKS)</font><br>
+<br><p>
+      <table cellspacing="1" cellpadding="0" width="100%">
+        <tr>
+          <td bgcolor="#339999" align="center"><font face="Arial, Helvetica" size="1"><b>#</b></font></td>
+	  <td bgcolor="#339999">&nbsp;</td>
+	  <td bgcolor="#339999"><font face="Arial, Helvetica" size="1"><b>Show</b></font></td>
+          <td bgcolor="#339999"><font face="Arial, Helvetica" size="1"><b>Mark</b></font></td>
+          <td bgcolor="#339999"><font face="Arial, Helvetica" size="1"><b>Message</b></font></td>
+          <td bgcolor="#339999"><font face="Arial, Helvetica" size="1"><b>Date</b></font></td>
+          <td bgcolor="#339999"><font face="Arial, Helvetica" size="1"><b>Size</b></font></td>
+	  <td bgcolor="#339999"><font face="Arial, Helvetica" size="1"><b>Delete</b></font></td>
+        </tr>
+        <tr>
+          <td colspan="8" bgcolor="#000000" width="100%"><img src="i_clear.gif" width="1" height="1"
+          border="0" alt=" "></td>
+        </tr>
+      MailMan(MESSAGELIST)
+<!-- MailManSnippet(NOMESSAGES)
+<tr><td colspan="8">
+<font face="Arial, Helvetica" size="2">No messages.</font></td></tr>
+EndSnippet(NOMESSAGES) -->
+<!-- MailManSnippet(MESSAGE_ODD)
+<tr>
+<td><font face="Arial, Helvetica" size="2">MailMan(MESSAGENUM)</font></td>
+<td>&nbsp; MailMan(ATTACHMENT_IMAGE)</td>
+<td align="center">
+<input name="SHOW:MailMan(ID)"
+ value="Show" type="submit"></td>
+<td align="center"><input type="checkbox" name="MARK:MailMan(ID)" value="Mark"></td>
+<td><font face="Arial, Helvetica" size="2"><b>From:</b> MailMan(FROM)<br><b>Subject:</b> MailMan(SUBJECT)</font></td>
+<td><font face="Arial, Helvetica" size="1">MailMan(DATE)</font></td>
+<td><font face="Arial, Helvetica" size="1">MailMan(SIZE)</font></td>
+<td align="center"><input name="DELETE:MailMan(ID)" value="Delete" type="submit"></td>
+</tr>
+EndSnippet(MESSAGE_ODD) -->
+<!-- MailManSnippet(MESSAGE_EVEN)
+<tr bgcolor="#339999">
+<td bgcolor="#339999"><font face="Arial, Helvetica" size="2">MailMan(MESSAGENUM)</font></td>
+<td bgcolor="#339999">&nbsp; MailMan(ATTACHMENT_IMAGE)</td>
+<td bgcolor="#339999" align="center">
+<input name="SHOW:MailMan(ID)"
+ value="Show" type="submit"></td>
+<td bgcolor="#339999" align="center"><input type="checkbox" name="MARK:MailMan(ID)" value="Mark"></td>
+<td bgcolor="#339999"><font face="Arial, Helvetica" size="2"><b>From:</b> MailMan(FROM)<br><b>Subject:</b> MailMan(SUBJECT)</font></td>
+<td bgcolor="#339999"><font face="Arial, Helvetica" size="1">MailMan(DATE)</font></td>
+<td bgcolor="#339999"><font face="Arial, Helvetica" size="1">MailMan(SIZE)</font></td>
+<td bgcolor="#339999" align="center"><input name="DELETE:MailMan(ID)" value="Delete" type="submit"></td>
+</tr>
+EndSnippet(MESSAGE_EVEN) -->
+<!-- MailManSnippet(ATTACHMENT_IMAGE) <font face="Arial, Helvetica" size="1">attachment</font> EndSnippet(ATTACHMENT_IMAGE) -->
+<!-- MailManSnippet(READ_IMAGE)
+Not used in non-graphical interface.
+EndSnippet(READ_IMAGE) -->
+<!-- MailManSnippet(UNREAD_IMAGE)
+Not used in non-graphical interface.
+EndSnippet(UNREAD_IMAGE) -->
+        <tr>
+          <td colspan="8" bgcolor="#000000" width="100%"><img src="i_clear.gif" width="1" height="1"
+          border="0" alt=" "></td>
+        </tr>
+      </table><br>
+      </p>
+      <p>
+      <table border="0">
+      <tr>
+      <td colspan="2">
+      <font face="Arial, Helvetica" size="2">
+      Use the check boxes above to mark messages to be deleted.
+      </font>
+      </td>
+      <td><input type="submit" name="DELETEMARKED" value="Delete Marked"></td>
+      </tr>
+      <!-- Only used in MailMan Professional Edition. -->
+      <!-- MMPRO
+      <tr>
+      <td align="right" valign="middle"><font face="Arial, Helvetica" size="2">Move marked messages to:</font></td>
+      <td align="right" valign="middle"><select name="FOLDERTRANSFERLIST">MailMan(FOLDERLIST)</select></td>
+      <td align="right" valign="middle"><input type="submit" name="MOVEMARKED" value="Move Marked"></td></tr>
+      MMPRO -->
+      </table>
+      </p>
+    <p align="center"><font face="Arial, Helvetica" size="1"><a
+    href="http://www.endymion.com/products/mailman">MailMan</a> Script Copyright &copy; 1997 - 1999
+    <a href="http://www.endymion.com">Endymion Corporation</a><br>
+    Interface Copyright &copy; 1997 - 1999
+    <a href="http://www.endymion.com">Endymion Corporation</a> and
+    <a href="http://www.hypnopaedia.com">Hypnopaedia Studios</a>.<br>
+    Microcompanies With Attitude</font><br>
+    </p>
+      </center></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
+
+
+
